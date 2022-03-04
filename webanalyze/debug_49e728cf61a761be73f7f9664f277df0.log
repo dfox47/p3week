@@ -1,0 +1,73 @@
+2016-05-23 11:20:10 Start Scan Process ver. 2.8 [scanner ver. 2.3]
+2016-05-23 11:20:10 Change Time limit: FALSE , Value: 60
+2016-05-23 11:20:10 Current Memory limit: 128M
+2016-05-23 11:20:10 OS info: Linux (Linux 3.14.51-grsec x86_64 at gen199.hs.shared.masterhost.ru)
+2016-05-23 11:20:10 PHP ver: 5.3.29-1+mh1
+2016-05-23 11:20:10 Domain: http://p3week.ru
+2016-05-23 11:20:10 Scan path: /home/u410502/p3week.ru/www/
+2016-05-23 11:20:10 Session report key: 51e3db0eb3b1ac915577e28a017f3f71
+2016-05-23 11:20:10 Report URL: https://www.siteguarding.com/antivirus/viewreport?report_id=51e3db0eb3b1ac915577e28a017f3f71
+2016-05-23 11:20:10 TMP folder: /home/u410502/p3week.ru/www/webanalyze/
+2016-05-23 11:20:13 -----------------------------------------------------------------------
+2016-05-23 11:20:13 Collecting info about the files [METHOD 2]
+2016-05-23 11:20:13 Excluded Folders: 0
+2016-05-23 11:20:14 Save collected file_list
+2016-05-23 11:20:14 Total files: 7910
+2016-05-23 11:20:14 -----------------------------------------------------------------------
+2016-05-23 11:20:14 Start - Pack with ZipArchive
+2016-05-23 11:20:14 Error: ZipArchive class is not exist.
+2016-05-23 11:20:14 ZipArchive method - finished
+2016-05-23 11:20:14 Error: zip file is not exists. Use OwnZipClass
+2016-05-23 11:20:14 OwnZipClass method - started
+2016-05-23 11:20:17 OwnZipClass method - finished
+2016-05-23 11:20:20 Pack file: /home/u410502/p3week.ru/www/webanalyze/pack_49e728cf61a761be73f7f9664f277df0.zip
+2016-05-23 11:20:20 Pack file is 14.33Mb
+2016-05-23 11:20:20 -----------------------------------------------------------------------
+2016-05-23 11:20:20 Start - Send Packed files to SG server
+2016-05-23 11:20:20 Pack URL: /webanalyze/pack_49e728cf61a761be73f7f9664f277df0.zip
+2016-05-23 11:20:20 CURL CURLOPT_INFILE: /home/u410502/p3week.ru/www/webanalyze/pack_49e728cf61a761be73f7f9664f277df0.zip
+2016-05-23 11:20:20 CURL CURLOPT_INFILESIZE: 15026810
+2016-05-23 11:20:25 CURL info - Array
+(
+    [url] => http://www.siteguarding.com/ext/antivirus/index.php?action=uploadfiles_ver2
+    [content_type] => text/html
+    [http_code] => 200
+    [header_size] => 236
+    [request_size] => 241
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 4.319713
+    [namelookup_time] => 0.000835
+    [connect_time] => 0.189199
+    [pretransfer_time] => 0.189322
+    [size_upload] => 15027532
+    [size_download] => 0
+    [speed_download] => 0
+    [speed_upload] => 3478826
+    [download_content_length] => 0
+    [upload_content_length] => 15027532
+    [starttransfer_time] => 0.37805
+    [redirect_time] => 0
+    [certinfo] => Array
+        (
+        )
+
+    [redirect_url] => 
+)
+
+2016-05-23 11:20:25 Pack file sent for analyze - OK
+2016-05-23 11:20:28 -----------------------------------------------------------------------
+2016-05-23 11:20:28 Start - Report generating
+2016-05-23 11:27:51 Done. Sending your report by email
+2016-05-23 11:27:51 Report Sent - OK
+2016-05-23 11:27:51 -----------------------------------------------------------------------
+2016-05-23 11:27:51 Array
+(
+    [type] => 2
+    [message] => curl_setopt(): supplied argument is not a valid File-Handle resource
+    [file] => /home/u410502/p3week.ru/www/webanalyze/antivirus.php
+    [line] => 2257
+)
+
+2016-05-23 11:27:51 PHP process has been terminated

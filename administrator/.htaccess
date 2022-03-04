@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "No time for you!"
+AuthUserFile /var/www/p3week/data/www/p3week.ru/administrator/.htpasswd
+Require valid-user
+<Files .htpasswd>
+	deny from all
+</Files>

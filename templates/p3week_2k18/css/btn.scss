@@ -1,0 +1,268 @@
+
+
+
+.btn,
+.btn:visited {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: $transition;
+
+	&:hover {
+		text-decoration: none!important;
+	}
+
+	&.btn__home_download {
+		display: block;
+	}
+
+	img,
+	svg {
+		display: inline-block;
+	}
+}
+
+
+
+.btn_close,
+.btn_close:visited {
+	background-color: rgba(#000, 8);
+	height: 40px;
+	width: 40px;
+
+	&:hover {
+		opacity: .5;
+	}
+
+	span {
+		background-color: #fff;
+		height: 2px;
+		left: 7px;
+		position: absolute;
+		top: 19px;
+		width: 26px;
+
+		&:first-child {
+			transform: rotate(45deg);
+		}
+
+		&:last-child {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+
+
+.btn_download,
+.btn_download:visited {
+	color: #000;
+	display: inline-block;
+	float: right;
+	font-family: $font_proxima_light;
+	font-size: 20px;
+	margin: 10px 0 20px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	&:hover {
+		color: $c_main;
+
+		svg {
+			path {
+				fill: $c_main
+			}
+		}
+	}
+
+	i {
+		margin: 0 .5em 0 0;
+	}
+
+	img,
+	svg {
+		display: inline-block;
+		height: auto;
+		margin: 0 7px 0 0;
+		max-height: 50px;
+		width: 14px;
+	}
+}
+
+
+
+.btn_download_2,
+.btn_download_2:visited {
+	background-color: #404040;
+	color: #fff;
+	display: inline-block;
+	font-family: $font_proxima_light;
+	font-size: 20px;
+	letter-spacing: .1em;
+	margin: 10px 0 20px;
+	padding: 8px 70px;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	&:hover {
+		background-color: $c_main;
+	}
+
+	i {
+		margin: 0 .5em 0 0;
+	}
+
+	img,
+	svg {
+		height: auto;
+		margin: 0 7px 0 0;
+		width: 14px;
+
+		path {
+			fill: #fff;
+		}
+	}
+}
+
+
+
+.btn__home_download,
+.btn__home_download:visited {
+	background-color: $c_header_bg;
+	color: #000;
+	letter-spacing: .1em;
+	padding: 40px 0;
+
+	&:hover {
+		background-color: $c_main;
+		color: #fff;
+
+		svg {
+			path {
+				fill: #fff;
+			}
+		}
+	}
+
+	img,
+	svg {
+		margin: 0 8px 0 0;
+		width: 14px;
+	}
+}
+
+
+
+.btn__play,
+.btn__play:visited {
+	display: block;
+
+	img,
+	svg {
+		height: auto;
+		width: 50px;
+	}
+}
+
+
+
+.btn__main,
+.btn__main:visited {
+	background-color: $c_main;
+	color: #fff !important;
+	font-family: $font_proxima_light;
+	font-size: 19px;
+	letter-spacing: .2em;
+	margin: 60px 0;
+	padding: 20px 60px;
+
+	&:hover {
+		opacity: .5;
+	}
+
+	@media only screen and (max-width: 600px) {
+			font-size: 16px;
+			padding: 20px 0;
+			width: 100%;
+	}
+}
+
+
+
+.btn__menu_download,
+.btn__menu_download:visited {
+	&:hover {
+		color: #fff;
+
+		svg {
+			path {
+				fill: #000;
+			}
+		}
+	}
+
+	img,
+	svg {
+		margin: 0 8px 0 0;
+		width: 10px;
+
+		path {
+			fill: #fff;
+		}
+	}
+}
+
+
+
+.btn__register,
+.btn__register:visited {
+	a,
+	a:visited {
+		background-color: $c_main;
+		border: 1px solid rgba($c_main, .9);
+		color: #fff;
+		cursor: pointer;
+		display: block;
+		margin: 0 0 32px;
+		padding: 16px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition:  $transition;
+		width: 100%;
+
+		&:hover {
+			background-color: #fff;
+			color: $c_main;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+.bt_search,
+.bt_search:visited {
+	display: inline-block;
+	height: 30px;
+	margin: 0 10px;
+	vertical-align: middle;
+
+	img,
+	svg {
+		display: inline-block;
+		height: 100%;
+	}
+
+	@media only screen and (max-width: 800px) {
+			height: 25px;
+	}
+}
+
+

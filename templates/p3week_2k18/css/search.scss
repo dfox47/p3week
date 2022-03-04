@@ -1,0 +1,167 @@
+
+
+
+.search {
+	dt {
+		margin: 50px 0 0;
+
+		&:first-child {
+			margin: 30px 0 0;
+		}
+	}
+
+	.btn-toolbar {
+		display: none;
+	}
+
+	.counter {
+		display: none;
+	}
+
+	.form-limit {
+		display: none;
+	}
+
+	.highlight {
+		background-color: $c_main;
+		color: #fff;
+		display: inline-block;
+		padding: 0 4px;
+	}
+
+	.only {
+		display: none;
+	}
+
+	.result-category {
+		font-family: $font_proxima_semibold;
+	}
+
+	.result-text {
+		font-family: $font_proxima_light;
+	}
+
+
+
+	&__active {
+		.bt_search {
+			background-color: #fff;
+
+			* {
+				fill: $c_main;
+			}
+		}
+
+		.search__wrap {
+			display: block;
+		}
+	}
+
+	&__close {
+		border: 1px solid #444;
+		cursor: pointer;
+		display: inline-block;
+		height: 30px;
+		position: relative;
+		transition: $transition;
+		vertical-align: middle;
+		width: 30px;
+
+		&:hover {
+			background-color: $c_menu_bg;
+
+			span {
+				background-color: #fff;
+			}
+		}
+
+		span {
+			background-color: $c_menu_bg;
+			display: block;
+			height: 1px;
+			left: 4px;
+			position: absolute;
+			transition: $transition;
+			top: 13px;
+			width: 21px;
+
+			&:first-child {
+				transform: rotate(45deg);
+			}
+
+			&:last-child {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	&__input {
+		font-style: normal;
+		max-width: 350px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+
+		@media #{$mobile} {
+			max-width: none;
+		}
+	}
+
+	&__submit_wrap {
+		display: inline-block;
+
+		@media #{$mobile} {
+			margin: 10px 0 0;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	&__wrap {
+		background-color: $c_search__bg;
+		display: none;
+		font-size: 0;
+		padding: 10px 0;
+
+		form {
+			display: block;
+			text-align: right;
+			width: 100%;
+
+			label {
+				background-color: $c_menu_bg;
+				color: #fff;
+				cursor: pointer;
+				display: inline-block;
+				font-size: 14px;
+				font-style: normal;
+				line-height: 32px;
+				margin: 0 10px;
+				outline: 0 none;
+				padding: 0 30px;
+				text-transform: uppercase;
+				transition: $transition;
+				vertical-align: middle;
+
+				&:hover {
+					background-color: $c_main;
+				}
+
+				input {
+					left: -9999px;
+					position: absolute;
+				}
+			}
+		}
+
+		input {
+			display: inline-block;
+			font-size: 14px;
+			line-height: 32px;
+			padding: 0 15px;
+			vertical-align: middle;
+		}
+	}
+}
+
+

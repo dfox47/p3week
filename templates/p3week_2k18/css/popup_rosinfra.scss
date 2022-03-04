@@ -1,0 +1,73 @@
+
+
+
+.popup_rosinfra {
+	align-items: center;
+	display: none;
+	height: 100%;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 17;
+}
+
+.popup_rosinfra_active {
+	.popup_rosinfra {
+		display: flex;
+	}
+}
+
+.popup_rosinfra_bg {
+	background-color: #000;
+	height: 100%;
+	left: 0;
+	opacity: .3;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.popup_rosinfra_close {
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 3;
+}
+
+.popup_rosinfra_content {
+	background-color: #fff;
+	max-width: 570px;
+	padding: 110px 30px 130px;
+	position: relative;
+	width: 100%;
+	z-index: 3;
+}
+
+.popup_rosinfra_img {
+	display: inline-block;
+	margin: 0 0 40px;
+}
+
+.popup_rosinfra_text {
+	font-size: 26px;
+
+	a,
+	a:visited {
+		color: $c_main;
+		text-transform: uppercase;
+	}
+
+	img {
+		display: inline-block;
+		margin: 20px 0 0;
+		max-width: 255px;
+		width: 100%;
+	}
+}
+
+

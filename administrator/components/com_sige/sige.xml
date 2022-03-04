@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.9" method="upgrade">
+    <name>COM_SIGE</name>
+    <version>3.4.2-FREE</version>
+    <creationDate>2020-12-14</creationDate>
+    <license>http://www.gnu.org/licenses/gpl</license>
+    <copyright>Copyright 2020 Viktor Vogel. All rights reserved.</copyright>
+    <author>Viktor Vogel</author>
+    <authorEmail>admin@kubik-rubik.de</authorEmail>
+    <authorUrl>https://kubik-rubik.de/</authorUrl>
+    <description>COM_SIGE_XML_DESCRIPTION</description>
+    <variant>free</variant>
+    <scriptfile>script.php</scriptfile>
+    <updateservers>
+        <server type="extension" priority="1" name="COM_SIGE">https://check.kubik-rubik.de/updates/com_sige.xml</server>
+    </updateservers>
+    <files folder="site">
+        <filename>index.html</filename>
+    </files>
+    <plugins>
+        <plugin folder="plugins" plugin="sige" name="PLG_CONTENT_SIGE" group="content"/>
+    </plugins>
+    <administration>
+        <menu>COM_SIGE</menu>
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>sige.php</filename>
+            <filename>controller.php</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_sige.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_sige.sys.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.com_sige.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.com_sige.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

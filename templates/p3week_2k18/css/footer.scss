@@ -1,0 +1,179 @@
+
+
+
+.footer {
+	background-color: $c_bg__footer;
+	margin: 10px 0 0;
+	padding: 45px 0 150px;
+
+	&__confidential {
+		font-size: 12px;
+		margin: 32px 0 0;
+		text-align: center;
+
+		a,
+		a:visited {
+			color: #000;
+			display: inline-block;
+			opacity: .7;
+			text-decoration: none;
+			transition: $transition;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__contacts {
+		letter-spacing: .1em;
+		text-align: center;
+		text-transform: uppercase;
+
+		a,
+		a:visited {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	&__links {
+		font-size: 0;
+		text-align: center;
+
+		a,
+		a:visited {
+			color: #000;
+			display: inline-block;
+			font-size: 10px;
+			margin: 0 20px 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			vertical-align: top;
+
+			span {
+				display: block;
+				margin: 0 0 2em;
+			}
+		}
+	}
+
+	&__links_2 {
+		font-size: 12px;
+		letter-spacing: .15em;
+		margin: 50px 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		a,
+		a:visited {
+			color: #000;
+			display: inline-block;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: $transition;
+			vertical-align: top;
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+
+	&__logo {
+		align-items: center;
+		//display: flex;
+		display: none;
+		flex-wrap: wrap;
+		font-size: 0;
+		justify-content: center;
+		margin: 50px 0 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		> div {
+			display: inline-block;
+			margin: 0 15px 100px;
+			vertical-align: bottom;
+
+			&:last-child {
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+
+			&:nth-child(1) {
+				img {
+					height: 64px;
+					width: 211px;
+				}
+			}
+
+			&:nth-child(2) {
+				img {
+					height: 64px;
+					width: 194px;
+				}
+			}
+
+			&:nth-child(3) {
+				img {
+					height: 96px;
+					width: 114px;
+				}
+			}
+
+			&:nth-child(4) {
+				img {
+					height: 54px;
+					width: 275px;
+				}
+			}
+		}
+
+		img {
+			display: block;
+			height: auto;
+			max-width: 350px;
+		}
+
+		&__title {
+			font-size: 14px;
+			margin: 0 0 30px;
+			text-align: left;
+		}
+
+		@media #{$mobile} {
+			> div {
+				&:last-child {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+
+		@media #{$mobile_s} {
+			img {
+				max-width: 220px;
+			}
+		}
+	}
+
+	&__logo_2 {
+		font-size: 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		> div {
+			display: inline-block;
+			margin: 0 5px 80px;
+			vertical-align: bottom;
+		}
+
+		img {
+			display: block;
+			max-width: 150px;
+		}
+	}
+}
+
+

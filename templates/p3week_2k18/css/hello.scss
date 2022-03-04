@@ -1,0 +1,158 @@
+
+
+
+.hello {
+	padding: 20px 120px 0;
+
+	> div {
+		margin: 0 0 100px;
+
+		&:last-child {
+			border: 0 none;
+		}
+	}
+
+	&__desc {
+		display: none;
+
+		p {
+			&.text-right {
+				text-align: right;
+			}
+		}
+
+		ul {
+			text-align: justify;
+
+			&.text-right {
+				text-align: right;
+			}
+		}
+	}
+
+	&__desc_wrap {
+		&.active {
+			.hello__desc {
+				display: block;
+			}
+
+			.hello__more {
+				background-color: $c_main;
+
+				&:hover {
+					opacity: .7;
+				}
+
+				span {
+					color: #fff;
+					opacity: 1;
+
+					&:first-child {
+						display: none;
+					}
+
+					&:last-child {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	&__img_desc {
+		font-family: $font_proxima_light;
+		font-size: 19px;
+
+		span {
+			display: block;
+		}
+	}
+
+	&__img_title {
+		font-family: $font_proxima_semibold;
+		font-size: 20px;
+		text-transform: uppercase;
+
+		&__wrap {
+			display: inline-block;
+			padding: 0 0 0 25px;
+			width: calc(100% - 220px);
+
+			@media #{$mobile} {
+				padding: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&__img_wrap {
+		font-size: 0;
+		margin: 0 0 20px;
+
+		> img {
+			//background-color: #000;
+			display: inline-block;
+			height: 220px;
+			width: 220px;
+		}
+
+		@media #{$mobile} {
+			margin-bottom: 20px;
+			text-align: center;
+
+			img {
+				margin: 0 0 35px;
+			}
+		}
+	}
+
+	&__more {
+		background-color: rgb(213,213,213);
+		cursor: pointer;
+		display: block;
+		font-family: $font_proxima_light;
+		font-size: 0;
+		margin: 20px 0 100px;
+		padding: 20px 0;
+		text-align: center;
+		text-transform: uppercase;
+		transition: $transition;
+		width: 100%;
+
+		&:hover {
+			background-color: $c_main;
+
+			span {
+				color: #fff;
+				opacity: 1;
+			}
+		}
+
+		span {
+			color: #000;
+			font-size: 19px;
+			letter-spacing: .3em;
+			opacity: .5;
+			transition: $transition;
+
+			&:last-child {
+				display: none;
+			}
+		}
+
+		@media #{$mobile} {
+			margin-top: 20px;
+
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@media #{$mobile} {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+

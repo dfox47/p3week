@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<extension type="plugin" version="3.0" method="upgrade" group="system">
+    <name>checklkform</name>
+    <author></author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <copyright></copyright>
+    <license></license>
+    <version>1.0</version>
+    <description>PLG_checklkformAJAX_DESC</description>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <filename plugin="checklkformajax">checklkformajax.php</filename>
+        <filename>index.html</filename>
+    </files>
+	<languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_checklkformajax.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_checklkformajax.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_checklkformajax.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_checklkformajax.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

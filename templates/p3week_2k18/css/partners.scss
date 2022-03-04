@@ -1,0 +1,607 @@
+
+
+
+.partners {
+	> div {
+		display: inline-block;
+		margin: 0 0 30px;
+		padding: 0 30px 0 0;
+		vertical-align: top;
+	}
+
+	img,
+	svg {
+		display: inline-block;
+		max-width: 200px;
+		transition: $transition;
+		width: 100%;
+	}
+
+	&__list {
+		align-items: center;
+		display: flex;
+		font-size: 0;
+		flex-wrap: wrap;
+
+		&__information {}
+
+		&.partners__list__information {
+			li {
+				vertical-align: top;
+			}
+		}
+
+		a,
+		a:visited {
+			color: #000;
+			display: block;
+			font-size: 14px;
+			height: 100%;
+			line-height: 78px;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			width: 100%;
+
+			&:hover {
+				img,
+				svg {
+					filter: grayscale(0);
+				}
+			}
+
+			span {
+				display: block;
+				font-size: 10px;
+				letter-spacing: .1em;
+				line-height: 1.1;
+				min-height: 34px;
+				margin: 0 0 8px;
+			}
+		}
+
+		li {
+			display: inline-block;
+			margin: 0 50px 50px 0;
+			vertical-align: middle;
+			width: 174px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		img,
+		svg {
+			display: inline-block;
+			height: auto;
+			max-height: 78px;
+			max-width: 178px;
+			vertical-align: middle;
+			width: auto;
+		}
+
+		.owl-item {
+			li {
+				padding: 0;
+				width: 100%;
+			}
+		}
+
+
+
+		.partner {
+			&__arpi {
+				img {
+					height: 71px;
+					width: 178px;
+				}
+			}
+
+			&__avtoban {
+				img {
+					height: 78px;
+					width: 88px;
+				}
+			}
+
+			&__avtodor {
+				img {
+					height: 28px;
+					width: 174px;
+				}
+			}
+
+			&__avtodor_invest {
+				img {
+					height: 28px;
+					width: 174px;
+				}
+			}
+
+			&__bo {
+				width: 120px;
+			}
+
+			&__bujet {
+				img {
+					height: 78px;
+					width: 180px;
+				}
+			}
+
+			&__cci {
+				img {
+					height: 55px;
+					width: 174px;
+				}
+			}
+
+			&__ccifr {
+				img {
+					height: 55px;
+					width: 174px;
+				}
+			}
+
+
+			&__deloitte {
+				img {
+					height: 78px;
+					width: 168px;
+				}
+			}
+
+			&__dentons {
+				img {
+					height: 34px;
+					width: 178px;
+				}
+			}
+
+			&__dns {
+				img {
+					height: 33px;
+					width: 714px;
+				}
+			}
+
+
+
+			&__eks {
+				img {
+					height: 59px;
+					width: 174px;
+				}
+			}
+
+			&__expert_rate {
+				img {
+					height: 56px;
+					width: 174px;
+				}
+			}
+
+			&__ey {
+				img {
+					height: 78px;
+					width: 102px;
+				}
+			}
+
+
+
+			&__finam {
+				width: 100px;
+
+				img {
+					height: 78px;
+					width: 100px;
+				}
+			}
+
+			&__fedpress {
+				img {
+					height: 56px;
+					width: 178px;
+				}
+			}
+
+			&__futurerussia {
+				img {
+					height: 30px;
+					width: 178px;
+				}
+			}
+
+
+
+			&__gazeta {
+				img {
+					height: 22px;
+					width: 174px;
+				}
+			}
+
+			&__globus {
+				img {
+					height: 46px;
+					width: 174px;
+				}
+			}
+
+			&__gor_trans {
+				img {
+					height: 34px;
+					width: 178px;
+				}
+			}
+
+			&__green {
+				img {
+					height: 40px;
+					width: 178px;
+				}
+			}
+
+
+
+			&__helix {
+				img {
+					height: 57px;
+					width: 174px;
+				}
+			}
+
+			&__herbert {
+				img {
+					height: 65px;
+					width: 174px;
+				}
+			}
+
+			&__ictas {
+				img {
+					height: 46px;
+					width: 174px;
+				}
+			}
+
+			&__infraone {
+				img {
+					height: 32px;
+					width: 174px;
+				}
+			}
+
+			&__interfax {
+				img {
+					height: 64px;
+					width: 174px;
+				}
+			}
+
+			&__investinfra {
+				img {
+					height: 72px;
+					width: 174px;
+				}
+			}
+
+			&__iz {
+				img {
+					height: 40px;
+					width: 150px;
+				}
+			}
+
+			&__kachkin {
+				img {
+					height: 40px;
+					width: 178px;
+				}
+			}
+
+			&__kesarev {
+				img {
+					height: 78px;
+					width: 100px;
+				}
+			}
+
+			&__lecap {
+				img {
+					height: 78px;
+					width: 116px;
+				}
+			}
+
+			&__lenta {
+				img {
+					height: 29px;
+					width: 174px;
+				}
+			}
+
+
+
+			&__megafon {
+				width: 180px;
+
+				img {
+					max-width: none;
+					width: 100%;
+				}
+			}
+
+			&__mejved {
+				img {
+					height: 36px;
+					width: 174px;
+				}
+			}
+
+			&__nac_prior {
+				img {
+					height: 64px;
+					width: 178px;
+				}
+			}
+
+			&__mir {
+				width: 78px;
+
+				img {
+					height: 78px;
+					width: 78px;
+				}
+			}
+
+			&__mts {
+				img {
+					height: 44px;
+					width: 178px;
+				}
+			}
+
+
+
+			&__p3inst {
+				img {
+					height: 70px;
+					width: 174px;
+				}
+			}
+
+			&__polyplastic {
+				img {
+					height: 33px;
+					width: 174px;
+				}
+			}
+
+			&__pppi {
+				img {
+					height: 45px;
+					width: 174px;
+				}
+			}
+
+			&__pravo {
+				img {
+					height: 29px;
+					width: 174px;
+				}
+			}
+
+			&__prime {
+				width: 210px;
+
+				img {
+					height: 50px;
+					max-width: 210px;
+					width: 210px;
+				}
+			}
+
+			&__probusiness {
+				img {
+					height: 31px;
+					width: 174px;
+				}
+			}
+
+			&__prosv {
+				img {
+					height: 73px;
+					width: 178px;
+				}
+			}
+
+			&__psb {
+				img {
+					height: 78px;
+					width: 149px;
+				}
+			}
+
+			&__pwc {
+				width: 103px;
+
+				img {
+					height: 78px;
+					width: 103px;
+				}
+			}
+
+
+
+			&__rbs {
+				img {
+					height: 60px;
+					width: 174px;
+				}
+			}
+
+			&__rencons {
+				img {
+					height: 53px;
+					width: 174px;
+				}
+			}
+
+			&__region {
+				img {
+					height: 50px;
+					width: 174px;
+				}
+			}
+
+			&__rg {
+				img {
+					height: 60px;
+					width: 174px;
+				}
+			}
+
+			&__rns {
+				img {
+					height: 78px;
+					width: 78px;
+				}
+			}
+
+			&__rwm {
+				img {
+					height: 47px;
+					width: 174px;
+				}
+			}
+
+
+
+			&__sberbank {
+				img {
+					height: 59px;
+					width: 178px;
+				}
+			}
+
+			&__spb {
+				img {
+					height: 58px;
+					width: 174px;
+				}
+			}
+
+			&__spectrum {
+				img {
+					height: 22px;
+					width: 178px;
+				}
+			}
+
+			&__squire {
+				img {
+					height: 50px;
+					width: 140px;
+				}
+			}
+
+			&__strategyjournal {
+				img {
+					height: 43px;
+					width: 160px;
+				}
+			}
+
+
+
+			&__tass {
+				img {
+					height: 78px;
+					width: 60px;
+				}
+			}
+
+
+
+			&__veb_infra {
+				width: 109px;
+
+				a,
+				a:visited {
+					text-align: left;
+				}
+
+				img {
+					height: 78px;
+					width: 109px;
+				}
+			}
+
+			&__vestnikstroy {
+				img {
+					height: 78px;
+					width: 180px;
+				}
+			}
+
+			&__vis {
+				img {
+					height: 78px;
+					width: 109px;
+				}
+			}
+
+			&__vtb {
+				img {
+					height: 29px;
+					width: 178px;
+				}
+			}
+
+			&__vtb_infra {
+				img {
+					height: 29px;
+					width: 178px;
+				}
+			}
+
+			&__wtw {
+				img {
+					height: 10px;
+					width: 174px;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 600px) {
+			a,
+			a:visited {
+				line-height: 1;
+
+				span {
+					min-height: 0;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-size: 13px;
+		letter-spacing: .1em;
+		margin: 0 0 10px;
+		min-height: 48px;
+		text-transform: uppercase;
+
+		a,
+		a:visited {
+			color: #000;
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+}
+
+

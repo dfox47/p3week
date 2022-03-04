@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<extension type="module" version="1.0.0" method="upgrade" client="site">
+    <name>MODULE_AJAX_checklkform</name>
+    <author>Ruslan Koleban</author>
+    <authorEmail>m12_dred@mail.ru</authorEmail>
+    <authorUrl>http://inetsys.ru</authorUrl>
+    <copyright></copyright>
+    <license></license>
+    <version>1.0</version>
+    <description>MOD_AJAX_checklkform_DESC</description>
+    <files>
+        <filename module="mod_ajax_checklkform">mod_ajax_checklkform.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_ajax_checklkform.ini</language>
+		<language tag="en-GB">language/en-GB.mod_ajax_checklkform.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU.mod_ajax_checklkform.ini</language>
+		<language tag="ru-RU">language/ru-RU.mod_ajax_checklkform.sys.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field 
+						name="test_param"
+						type="color"
+						label="MOD_AJAX_TEST_TEST_PARAM"
+						required="false"
+						default="red">
+				</field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC" default="1">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,198 @@
+
+
+
+.menu_slider {
+	background-color: $c_main;
+	font-size: 0;
+	//height: 100%;
+	max-height: 620px;
+	opacity: 0;
+	outline: 0 none;
+	position: fixed;
+	top: -2000px;
+	transition: $transition;
+	width: 100%;
+	z-index: 17;
+
+	.menu {
+		display: block;
+		font-size: 16px;
+		letter-spacing: .1em;
+		margin: 0 0 34px;
+		padding: 0 30px 30px 0;
+		position: relative;
+		text-align: left;
+		text-transform: uppercase;
+
+		&::after {
+			background-color: #fff;
+			content: "";
+			display: block;
+			height: 1px;
+			left: 0;
+			max-width: 150px;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		a,
+		a:visited {
+			color: #fff;
+			display: inline-block;
+			padding: 0 0 1em;
+			text-decoration: none;
+
+			&:hover {
+				color: #000;
+			}
+		}
+
+		> li {
+			display: block;
+			position: relative;
+			width: 100%;
+
+			&:last-child {
+				a,
+				a:visited {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.menu_top__1 {
+		.menu {
+			&:first-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+
+				&::after {
+					display: none;
+				}
+
+				> li {
+					&:last-child {
+						padding-bottom: 1em;
+					}
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 36px;
+			}
+
+			&:nth-child(3) {
+				margin-bottom: 0;
+				padding-bottom: 0;
+
+				&::after {
+					display: none;
+				}
+
+				> li {
+					&:last-child {
+						padding-bottom: 1em;
+					}
+				}
+			}
+		}
+	}
+
+	.nav_more {
+		display: none;
+	}
+
+	&__close {
+		cursor: pointer;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100px;
+
+		span {
+			background-color: #fff;
+			bottom: 12px;
+			display: block;
+			height: 4px;
+			position: absolute;
+			right: 30px;
+			transition: $transition;
+			width: 30px;
+
+			&:nth-child(1) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	&__close_wrap {
+		background-color: $c_main;
+		display: none;
+		height: 70px;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 15;
+
+		> div {
+			height: 100%;
+		}
+	}
+
+	&__line_bottom {
+		bottom: 0;
+		height: 50px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 15;
+
+		span {
+			background-color: $c_main;
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+
+		.wrap {
+			height: 100%;
+		}
+	}
+
+	&__wrap {
+		height: 100%;
+		overflow-y: auto;
+		position: relative;
+	}
+
+	&__wrap2 {
+		align-items: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	@media #{$mobile} {
+		height: 100%;
+		max-height: none;
+	}
+}
+
+

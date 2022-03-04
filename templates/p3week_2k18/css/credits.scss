@@ -1,0 +1,160 @@
+
+
+
+.credits {
+	&__desc {
+		font-size: 14px;
+		letter-spacing: .03em;
+		margin: 10px 0 0;
+		text-align: right;
+		text-transform: uppercase;
+
+		a,
+		a:visited {
+			color: #000;
+			display: inline-block;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@media #{$mobile} {
+			text-align: left;
+		}
+	}
+
+	&__links {
+		font-size: 0;
+		margin: 28px 0 0;
+		text-align: right;
+		text-transform: uppercase;
+
+		a,
+		a:visited {
+			color: #000;
+			display: inline-block;
+			font-size: 14px;
+			margin: 0 0 0 15px;
+			text-decoration: none;
+			vertical-align: middle;
+			width: 106px;
+
+			img,
+			svg {
+				display: inline-block;
+				height: 31px;
+				width: 106px;
+			}
+		}
+
+		@media #{$mobile} {
+			text-align: left;
+
+			a,
+			a:visited {
+				margin: 0 20px 0 0;
+			}
+		}
+	}
+
+	&__logo,
+	&__logo:visited {
+		display: block;
+		margin: 0 0 20px;
+		padding: 0 0 20px;
+		position: relative;
+		text-align: right;
+		text-decoration: none;
+		width: 100%;
+
+		&::after {
+			background-color: #000;
+			content: "";
+			display: none;
+			height: 1px;
+			max-width: 224px;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			width: 100%;
+		}
+
+		img,
+		svg {
+			display: inline-block;
+			max-height: 132px;
+			max-width: 114px;
+			width: 100%;
+
+			path {
+				fill: #000;
+
+				&.credits__logo__white {
+					fill: #fff;
+				}
+			}
+		}
+
+		.svg {
+			display: none;
+
+			&.replaced-svg {
+				display: inline-block;
+			}
+		}
+
+		&__white {}
+
+		@media #{$mobile} {
+			text-align: left;
+
+			&::after {
+				left: 0;
+				right: auto;
+			}
+		}
+	}
+
+	&__logo_2,
+	&__logo_2:visited {
+		display: block;
+		margin: 0 0 20px;
+		padding: 0 0 20px;
+		position: relative;
+		text-align: right;
+		text-decoration: none;
+		width: 100%;
+
+		img,
+		svg {
+			display: inline-block;
+			max-height: 132px;
+			max-width: 224px;
+			width: 100%;
+
+			path {
+				fill: #fff;
+
+				&.credits__logo__white {
+					fill: #fff;
+				}
+			}
+		}
+
+		.svg {
+			display: none;
+
+			&.replaced-svg {
+				display: inline-block;
+			}
+		}
+
+		@media #{$mobile_s} {
+			max-width: 180px;
+		}
+	}
+}
+
+

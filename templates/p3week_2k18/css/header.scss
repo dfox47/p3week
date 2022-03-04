@@ -1,0 +1,402 @@
+
+
+
+.header {
+	background-color: $c_header_bg;
+	margin: 0;
+	padding: 25px 0 55px;
+
+	&__divider {
+		background-color: #000;
+		display: none;
+		height: 140px;
+		width: 1px;
+
+		@media #{$tablet} {
+			display: none;
+		}
+	}
+
+	&__left {
+		align-items: flex-end;
+		display: flex;
+		font-size: 0;
+
+		@media #{$tablet} {
+			background-color: $c_header_bg;
+			padding: 30px;
+			width: 100%;
+		}
+	}
+
+	&__right {
+		position: relative;
+		text-align: right;
+		max-width: 420px;
+
+		@media #{$tablet} {
+			max-width: none;
+			padding: 0 20px 20px;
+			width: 100%;
+		}
+	}
+
+	&__right_block {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 20px;
+		width: 100%;
+
+		&:first-child {
+			> div {
+				margin: 0 20px 0 0;
+			}
+		}
+
+		&:last-child {
+			margin: 0;
+
+			> div {
+				width: 100%;
+			}
+
+			.header_title_1 {
+				margin: 0;
+			}
+		}
+
+		a,
+		a:visited {
+			transition: $transition;
+		}
+
+		a:hover {
+			img,
+			svg {
+				filter: grayscale(0);
+			}
+		}
+
+		img,
+		svg {
+			filter: grayscale(100%);
+		}
+	}
+
+	&__wrap {
+		align-items: flex-end;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+
+
+	.logo {
+		.credits__logo__white {
+			fill: $c_main;
+		}
+	}
+
+	@media #{$tablet} {
+		background: 0 none;
+		padding: 0;
+
+		.wrap {
+			padding: 0;
+		}
+	}
+
+	@media #{$mobile} {
+		&__left {
+			width: 100%;
+		}
+	}
+}
+
+.header_links {
+	a,
+	a:visited {
+		color: #000;
+		display: inline-block;
+		font-size: 0;
+		margin: 0 10px 10px 0;
+		text-decoration: none;
+		vertical-align: middle;
+
+		&:hover {
+			svg,
+			img {
+				filter: grayscale(0%);
+			}
+		}
+
+		&.header_links__deloros {
+			margin: 0 10px 0 0;
+		}
+
+		&.header_links__pppcenter,
+		&.header_links__pppcenter_en,
+		&.header_links__roscongress,
+		&.header_links__rosinfra,
+		&.header_links__sber,
+		&.header_links__veb_rf {
+			span {
+				display: block;
+			}
+		}
+
+		span {
+			display: none;
+		}
+	}
+
+	svg,
+	img {
+		display: block;
+		height: auto;
+		transition: $transition;
+	}
+
+	.owl-carousel {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.owl-dot {
+		background-color: $c_header_bg;
+		border-radius: 50%;
+		display: inline-block;
+		height: 10px;
+		margin: 0 5px;
+		width: 10px;
+
+		&.active {
+			background-color: #000;
+		}
+	}
+
+	.owl-dots {
+		margin: 10px 0 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.owl-item {
+		padding: 0 10px;
+		text-align: center;
+
+		a,
+		a:visited {
+			margin: 0;
+		}
+
+		.header_title_1__hidden_on_desktop {
+			display: block;
+		}
+	}
+
+	.owl-stage {
+		align-items: center;
+		display: flex;
+	}
+
+
+
+	&__ac {
+		width: 180px;
+
+		img,
+		svg {
+			height: 33px;
+			width: 180px;
+		}
+	}
+
+	&__asi {
+		img,
+		svg {
+			height: 46px;
+			width: 114px;
+		}
+	}
+
+	&__deloros {
+		img,
+		svg {
+			width: 150px;
+		}
+	}
+
+	&__deloros_en {
+		img,
+		svg {
+			width: 100px;
+		}
+	}
+
+	&__pppcenter {
+		max-width: 270px;
+		width: 270px;
+
+		img {
+			width: 270px;
+		}
+
+		@media #{$tablet} {
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__pppcenter_en {
+		img {
+			width: 208px;
+		}
+	}
+
+	&__rspp {
+		img,
+		svg {
+			height: 48px;
+			width: 50px;
+		}
+	}
+
+	&__roscongress {
+		width: 150px;
+	}
+
+	&__rosinfra {
+		width: 150px;
+	}
+
+	&__sber {
+		width: 150px;
+
+		img {
+			max-width: 120px;
+		}
+	}
+
+	&__tpprf {
+		img,
+		svg {
+			width: 74px;
+		}
+	}
+
+	&__tpprf_en {
+		img,
+		svg {
+			padding: 5px 0 0;
+			width: 80px;
+		}
+	}
+
+	&__veb_infra {}
+
+	&__veb_infra_en {}
+
+	&__veb_rf {
+		width: 120px;
+
+		img {
+			max-width: 60px;
+		}
+	}
+
+	@media #{$tablet} {
+		a,
+		a:visited {
+			span {
+				display: block;
+			}
+		}
+
+		&__ac {
+			width: 100%;
+		}
+	}
+
+	@media #{$mobile_s} {
+		.owl-item {
+			img,
+			svg {
+				max-width: 110px;
+			}
+
+			.header_links__rspp {
+				img,
+				svg {
+					max-width: 70px;
+				}
+			}
+		}
+	}
+}
+
+.header_logo_2,
+.header_logo_2:visited {
+	display: block;
+	margin: 0 0 20px;
+	max-width: 170px;
+	width: 100%;
+
+	&:hover {
+		img,
+		svg {
+			filter: grayscale(0);
+		}
+	}
+
+	img,
+	svg {
+		display: block;
+		height: auto;
+		filter: grayscale(100%);
+		width: 100%;
+	}
+
+	@media #{$mobile_s} {
+		display: none;
+	}
+}
+
+.header_title {
+	&__special {
+		display: inline-block;
+		font-size: 10px;
+		letter-spacing: .1em;
+		margin: 20px 0 15px;
+		min-height: 10px;
+		text-align: left;
+		text-transform: uppercase;
+		width: 100%;
+
+		@media #{$tablet} {
+			display: none;
+		}
+	}
+}
+
+.header_title_1 {
+	font-size: 10px;
+	letter-spacing: .1em;
+	line-height: 1.2;
+	margin: 15px 0;
+	min-height: 10px;
+	text-align: left;
+	text-transform: uppercase;
+
+	&__hidden_on_desktop {
+		display: none;
+	}
+}
+
+

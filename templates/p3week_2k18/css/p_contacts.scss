@@ -1,0 +1,114 @@
+
+
+
+.p_contacts {
+	&__block {
+		margin: 0 0 30px;
+	}
+
+	&__img {
+		position: relative;
+
+		img {
+			display: block;
+			transition: $transition;
+
+			&:hover {
+				&:last-child {
+					opacity: 1;
+				}
+			}
+
+			&:first-child {}
+
+			&:last-child {
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&__left {
+		float: left;
+		padding: 0 15px 0 0;
+		width: 50%;
+
+		@media #{$mobile} {
+			float: none;
+			margin: 0 auto;
+			max-width: 600px;
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	&__links {
+		@media #{$mobile} {
+			display: block;
+			margin: 60px auto 0;
+			max-width: 600px;
+			width: 100%;
+
+			a,
+			a:visited {
+				margin-bottom: 30px;
+				padding: 24px;
+				width: 100%;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				> span {
+					> span {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+	&__map {
+		display: block;
+		height: 324px;
+		margin: 30px 0 60px;
+		width: 100%;
+
+		&:last-child {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__more {
+		display: inline-block;
+		margin: 10px 0 0;
+
+		img,
+		svg {
+			display: inline-block;
+			margin: 0 8px 0 0;
+			vertical-align: middle;
+			width: 14px;
+		}
+	}
+
+	&__right {
+		float: right;
+		padding: 0 0 0 15px;
+		width: 50%;
+
+		@media #{$mobile} {
+			float: none;
+			margin: 0 auto;
+			max-width: 600px;
+			padding: 0;
+			width: 100%;
+		}
+	}
+}
+
+

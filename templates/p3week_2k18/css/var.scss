@@ -1,0 +1,85 @@
+
+
+
+$c_bg__footer:          #ededed;
+$c_bg__grey_dark:       #404040;
+$c_header_bg:           #f0f0f0;
+$c_hr:                  #636363;
+$c_main:                #e4032b;
+$c_menu_bg:             #2d2d2d;
+$c_search__bg:          #d6d6d6;
+$c_text__grey:          #999;
+$c_text__greyX:         #23346b;
+$c_text__greyX:         #d01417;
+
+
+
+$transition:            all .3s ease-in-out;
+
+
+
+// @medias
+$desktop:               'only screen and (max-width: 1279px)';
+$mobile:                'only screen and (max-width: 767px)';
+$mobile_s:              'only screen and (max-width: 400px)';
+$tablet:                'only screen and (max-width: 1023px)';
+
+
+
+// fonts
+$font_main:                 'proxima_reg',      Arial, Helvetica, sans-serif;
+$font_proxima_black:        'proxima_black',    Arial, Helvetica, sans-serif;
+$font_proxima_bold:         'proxima_bold',     Arial, Helvetica, sans-serif;
+$font_proxima_light:        'proxima_light',    Arial, Helvetica, sans-serif;
+$font_proxima_reg:          'proxima_reg',      Arial, Helvetica, sans-serif;
+$font_proxima_semibold:     'proxima_semibold', Arial, Helvetica, sans-serif;
+
+
+
+// proxima_black
+@font-face {
+	font-family: 'proxima_black';
+	src: url('fonts/proxima_black.eot');
+	src: url('fonts/proxima_black.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proxima_black.woff2') format('woff2'),
+	url('fonts/proxima_black.woff') format('woff'),
+	url('fonts/proxima_black.ttf') format('truetype');
+}
+
+// proxima_bold
+@font-face {
+	font-family: 'proxima_bold';
+	src: url('fonts/proxima_bold.eot');
+	src: url('fonts/proxima_bold.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proxima_bold.woff') format('woff'),
+	url('fonts/proxima_bold.ttf') format('truetype');
+}
+
+// proxima_light
+@font-face {
+	font-family: 'proxima_light';
+	src: url('fonts/proxima_light.eot');
+	src: url('fonts/proxima_light.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proxima_light.woff') format('woff'),
+	url('fonts/proxima_light.ttf') format('truetype');
+}
+
+// proxima_reg
+@font-face {
+	font-family: 'proxima_reg';
+	src: url('fonts/proxima_reg.eot');
+	src: url('fonts/proxima_reg.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proxima_reg.woff') format('woff'),
+	url('fonts/proxima_reg.ttf') format('truetype');
+}
+
+// proxima_semibold
+@font-face {
+	font-family: 'proxima_semibold';
+	src: url('fonts/proxima_semibold.eot');
+	src: url('fonts/proxima_reg.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proxima_semibold.woff') format('woff'),
+	url('fonts/proxima_semibold.ttf') format('truetype');
+}
+
+

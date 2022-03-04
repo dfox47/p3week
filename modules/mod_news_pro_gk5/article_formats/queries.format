@@ -1,0 +1,8 @@
+<div>
+<b class="b2"></b>
+	<img src="media\plg_user_profilepicture\images\200\{AUTHOR_PICTURE}" width="146">
+<b class="b1"></b>
+</div>
+<article>
+		{TEXT}	
+</article>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="administrator" method="upgrade">    
+	<name>mod_user_import</name>    
+	<creationDate>12 Февраля 2016</creationDate>    
+	<author>Danmer</author>    
+	<authorEmail>danmer@inetsys.ru</authorEmail>    
+	<authorUrl>http://danmer-studio.ru</authorUrl>    
+	<copyright>Права вообще не защищены</copyright>    
+	<license>GNU/GPL</license>    
+	<version>0.0.1</version>    
+	<description>Импортирует пользователей из excel</description>    
+	<files>        
+		<filename module="mod_user_import">mod_user_import.php</filename>        
+		<filename>helper.php</filename>                
+		<filename>tmpl/default.php</filename>    
+	</files>
+<languages>        
+	<language tag="en-GB">en-GB.mod_user_import.ini</language>    
+</languages> 
+<help key="JHELP_EXTENSIONS_MODULE_MANAGER_ADMIN_VERSION" />
+<config>         
+	<fields name="params">                
+		<fieldset name="basic">                    
+			          
+		</fieldset>        
+	</fields> 
+</config>
+</extension>

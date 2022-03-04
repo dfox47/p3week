@@ -1,0 +1,10 @@
+<div>
+<b class="b2"></b>
+	<img src="media\plg_user_profilepicture\images\200\{AUTHOR_PICTURE}" width="146">
+<b class="b1"></b>
+</div>
+<article>
+		<p>{TEXT}</p>
+		<span class="name1">{AUTHOR_NAME}</span>
+		<span class="ficha0">{AUTHOR_STATUS}</span>
+</article>

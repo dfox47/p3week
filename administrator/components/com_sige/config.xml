@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fields addfieldpath="/administrator/components/com_sige/models/fields">
+        <fieldset name="component">
+            <field name="krtitle_settings" type="krtitle" label="COM_SIGE_PLUGIN_SETTINGS"/>
+        </fieldset>
+        <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+            <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" validate="rules" filter="rules" component="com_sige" section="component"/>
+        </fieldset>
+    </fields>
+</config>
