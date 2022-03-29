@@ -99,6 +99,11 @@
 .speakers_home {
 	padding: 0 110px;
 
+	h3 {
+		margin: 0 0 .5em;
+		text-transform: uppercase;
+	}
+
 	img {
 		filter: grayscale(100%);
 		margin: 0 0 20px;
