@@ -561,60 +561,6 @@ ul {
 
 
 
-.home_slider {
-	.owl-item {
-		opacity: 0;
-		transition: all 1s ease-in-out;
-
-		&.active {
-			opacity: 1;
-			transition: $transition;
-		}
-
-		img {
-			height: 300px;
-			max-height: 300px;
-			object-fit: cover;
-			width: 621px;
-		}
-	}
-
-	@media #{$tablet} {
-		.owl-item {
-			img {
-				height: auto;
-				width: 100%;
-			}
-		}
-	}
-}
-
-.home_video {
-	align-items: center;
-	background: url(/images/home/6.jpg) center center no-repeat scroll transparent;
-	background-size: cover;
-	border: 1px solid $c_text__grey;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	transition: $transition;
-
-	&:hover {
-		opacity: .7;
-	}
-
-	iframe {
-		left: 0;
-		margin: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 3;
-	}
-}
-
-
-
 .info_covid {
 	background-color: $c_main;
 	color: #fff;
