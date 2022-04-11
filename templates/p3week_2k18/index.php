@@ -4,10 +4,10 @@
 $doc = JFactory::getDocument(); ?>
 
 <?php $lang         = JFactory::getLanguage();
-$languages			= JLanguageHelper::getLanguages('lang_code');
-$languageTag		= $lang->getTag();
-$languageCode		= $languages[ $lang->getTag() ]->sef;
-$languageName		= $lang->getName();
+$languages          = JLanguageHelper::getLanguages('lang_code');
+$languageTag        = $lang->getTag();
+$languageCode       = $languages[ $lang->getTag() ]->sef;
+$languageName       = $lang->getName();
 
 
 $jinput = JFactory::getApplication()->input;
@@ -19,21 +19,7 @@ unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.min.js']); // Rem
 
 unset(
 	$this->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']
-//$this->_scripts[$this->baseurl.'/media/system/js/mootools-more.js'],
-//$this->_scripts[$this->baseurl.'/media/system/js/core.js'],
-//$this->_scripts[$this->baseurl.'/media/system/js/caption.js'],
-
-//$this->_scripts[$this->baseurl.'/media/modals/js/script.min.js?v=9.10.0'],
-//$this->_scripts[$this->baseurl.'/media/modals/js/jquery.touchSwipe.min.js'],
-//$this->_scripts[$this->baseurl.'/media/modals/js/jquery.colorbox-min.js'],
-
-//$this->_scripts[$this->baseurl.'/plugins/system/jcemediabox/js/jcemediabox.js'],
-
-//$this->_scripts[$this->baseurl.'/media/jui/js/jquery.min.js'],
-//$this->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js'],
-//$this->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']
-);
-?>
+); ?>
 
 <!DOCTYPE html>
 
@@ -102,8 +88,6 @@ unset(
 		}()
 	</script>
 
-<!--	<meta property="og:title" content="San Roque 2014 Pollos" />-->
-<!--	<meta property="og:description" content="Programa de fiestas" />-->
 	<meta property="og:image" content="https://p3week.ru/images/logo2021.svg" />
 
 	<jdoc:include type="head" />
@@ -189,7 +173,7 @@ unset(
 	</div>
 <?php } ?>
 
-<?php if($this->countModules('header')) { ?>
+<?php if ($this->countModules('header')) { ?>
 	<div class="header">
 		<div class="wrap">
 			<jdoc:include type="modules" name="header" style="none" />
@@ -197,45 +181,31 @@ unset(
 	</div>
 <?php } ?>
 
-
-
-<!--<div class="lang_ru_only">-->
-<!--	<a class="link_rosinfra" href="//rosinfra.ru/p3week" target="_blank"><span>Смотрите</span> видеозаписи сессий Недели ГЧП 2020 на <img src="/images/partners/rosinfra.svg" alt="rosinfra.ru" /></a>-->
-<!--</div>-->
-<!---->
-<!--<div class="lang_en_only">-->
-<!--	<a class="link_rosinfra" href="//rosinfra.ru/p3week" target="_blank"><span>Watch</span> video recordings of PPP Week 2020 at <img src="/images/partners/rosinfra_en.svg" alt="rosinfra.ru" /></a>-->
-<!--</div>-->
-
-
-
-<?php if($this->countModules('p3transport__link')) { ?>
+<?php if ($this->countModules('p3transport__link')) { ?>
 	<jdoc:include type="modules" name="p3transport__link" style="none" />
 <?php } ?>
 
-<?php if($this->countModules('new_block')) { ?>
+<?php if ($this->countModules('new_block')) { ?>
 	<div class="wrap">
 		<jdoc:include type="modules" name="new_block" style="none" />
 	</div>
 <?php } ?>
 
-<?php if($this->countModules('breadcrumbs')) { ?>
+<?php if ($this->countModules('breadcrumbs')) { ?>
 	<div class="wrap">
 		<jdoc:include type="modules" name="breadcrumbs" style="none" />
 	</div>
 <?php } ?>
 
-<?php if($this->countModules('menu_top_sub')) { ?>
+<?php if ($this->countModules('menu_top_sub')) { ?>
 	<div class="wrap">
 		<jdoc:include type="modules" name="menu_top_sub" style="none" />
 	</div>
 <?php } ?>
 
-<?php if($this->countModules('before_content')) { ?>
+<?php if ($this->countModules('before_content')) { ?>
 	<jdoc:include type="modules" name="before_content" style="none" />
 <?php } ?>
-
-
 
 <div class="wrap">
 	<div class="content">
@@ -247,7 +217,9 @@ unset(
 	</div>
 </div>
 
-
+<?php if (strpos($_SERVER['REQUEST_URI'], "/registration-new") !== false) { ?>
+	<?php include_once 'registration.php'; ?>
+<?php } ?>
 
 <?php if($this->countModules('after_content')) { ?>
 	<jdoc:include type="modules" name="after_content" style="none" />
@@ -302,25 +274,6 @@ unset(
 		locale: "ru"//локаль
 	})
 </script>
-
-
-
-<!--<div class="popup_rosinfra">-->
-<!--	<div class="popup_rosinfra_bg js-popup-rosinfra-toggle"></div>-->
-<!---->
-<!--	<div class="popup_rosinfra_content">-->
-<!--		<a href="javascript:void(0);" class="js-popup-rosinfra-toggle btn btn_close popup_rosinfra_close"><span></span><span></span></a>-->
-<!---->
-<!--		<img class="popup_rosinfra_img" src="/images/btn_play_2.jpg" alt="" />-->
-<!---->
-<!--		<div class="popup_rosinfra_text">-->
-<!--			<a href="//rosinfra.ru/p3week" target="_blank">Смотрите</a><br />-->
-<!--			трансляцию Недели ГЧП на<br />-->
-<!---->
-<!--			<img src="/images/partners/rosinfra.svg" alt="РОСИНФРА" />-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</div>-->
 
 <div class="popup_covid js-popup-covid">
 	<div class="popup_covid__bg js-popup-covid-close"></div>

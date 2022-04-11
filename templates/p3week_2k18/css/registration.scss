@@ -1,0 +1,88 @@
+
+.reg_form {
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		margin: 2em 0 .5em;
+	}
+
+	input {
+		&[type="text"] {
+			border: 1px solid #000;
+			padding: .5em 1em;
+		}
+	}
+
+	select {
+		cursor: pointer;
+	}
+
+	&__label {
+		align-items: center;
+		display: flex;
+		margin: 0 0 20px;
+	}
+
+	&__select {}
+
+	&__title {
+		display: inline-block;
+		font-size: 18px;
+		font-weight: 700;
+		padding: 0 30px 0 0;
+		text-align: right;
+		width: 300px;
+	}
+}
+
+.reg_form_checkbox {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	margin: 0 30px 10px 0;
+	position: relative;
+
+	input {
+		left: -9999px;
+		position: absolute;
+
+		&:checked {
+			+ .reg_form_checkbox__box {
+				background-color: $c_main;
+			}
+		}
+	}
+
+	&__box {
+		border: 1px solid #000;
+		display: inline-block;
+		height: 12px;
+		margin: 0 8px 0 0;
+		vertical-align: middle;
+		width: 12px;
+	}
+
+	&__title {}
+}
+
+.reg_step {
+	// TODO remove comment
+	//display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+@media print {
+	.page_id_4494 {
+		.breadcrumbs,
+		.footer,
+		.header,
+		.menu_top,
+		.page-header {
+			display: none;
+		}
+	}
+}
