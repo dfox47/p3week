@@ -1,7 +1,29 @@
 
+.reg_btn {
+	background-color: $c_bg__grey_dark;
+	color: #fff;
+	cursor: pointer;
+	margin: 1em;
+	padding: .5em 1em;
+	text-transform: uppercase;
+	transition: $transition;
+
+	&:hover {
+		background-color: $c_main;
+	}
+}
+
+.reg_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
 .reg_form {
 	display: flex;
 	flex-direction: column;
+	padding: 0 0 100px;
 
 	h2 {
 		margin: 2em 0 .5em;
@@ -67,8 +89,7 @@
 }
 
 .reg_step {
-	// TODO remove comment
-	//display: none;
+	display: none;
 
 	&.active {
 		display: block;

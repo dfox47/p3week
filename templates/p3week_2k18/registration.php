@@ -1,7 +1,7 @@
 
 <div class="wrap">
 	<form class="reg_form">
-		<div class="reg_step active" data-step="1">
+		<div class="reg_step active js-reg-step" data-step="1">
 			<label class="reg_form__label">
 				<span class="reg_form__title">Категории</span>
 
@@ -15,6 +15,13 @@
 					<option value="type7" data-price="0">СМИ</option>
 				</select>
 			</label>
+
+			<div class="reg_form__label">
+				<div class="reg_form__title">Стоимость</div>
+				<div>
+					<span class="reg_price js-reg-price">0</span>&nbsp;руб.
+				</div>
+			</div>
 
 			<div class="reg_form__label">
 				<div class="reg_form__title">Выберите, какие дни вы планируете посетить:</div>
@@ -37,10 +44,14 @@
 					<span class="reg_form_checkbox__title">14 сентября</span>
 				</label>
 			</div>
+
+			<div class="reg_buttons">
+				<button class="reg_btn js-reg-step-show" data-step="2">Продолжить</button>
+			</div>
 		</div>
 
 		<!-- step 2 -->
-		<div class="reg_step" data-step="2">
+		<div class="reg_step js-reg-step" data-step="2">
 			<h2>Персональные данные</h2>
 
 			<label class="reg_form__label">
@@ -135,6 +146,11 @@
 						<span class="reg_form_checkbox__title">Да</span>
 					</label>
 				</div>
+			</div>
+
+			<div class="reg_buttons">
+				<button class="reg_btn js-reg-step-show" data-step="1">Назад</button>
+				<button class="reg_btn js-reg-step-show" data-step="3">Продолжить</button>
 			</div>
 		</div>
 	</form>
