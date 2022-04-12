@@ -1,6 +1,4 @@
 
-
-
 // Standart class [START]
 article {
 	font-size: 19px;
@@ -44,8 +42,6 @@ body {
 	font-family: $font_main;
 }
 
-
-
 h1 {
 	color: $c_main;
 	font-family: $font_proxima_semibold;
@@ -76,8 +72,6 @@ h2 {
 		}
 	}
 }
-
-
 
 ol {
 	counter-reset: item;
@@ -194,8 +188,6 @@ ul {
 	}
 }
 
-
-
 .article-info-term {
 	display: none;
 }
@@ -205,8 +197,6 @@ ul {
 		margin: 1em 0;
 	}
 }
-
-
 
 .bg_grey {
 	background-color: $c_bg__grey_dark;
@@ -233,8 +223,6 @@ ul {
 	background-color: rgba($c_bg__grey_dark, .1);
 }
 
-
-
 .bg_red {
 	background-color: rgba($c_main, .8);
 }
@@ -250,8 +238,6 @@ ul {
 .bg_pink_light {
 	background-color: rgba($c_main, .3);
 }
-
-
 
 .block_reg {
 	a,
@@ -416,8 +402,6 @@ ul {
 	font-family: $font_proxima_semibold;
 }
 
-
-
 .c_red {
 	color: $c_main;
 }
@@ -426,13 +410,9 @@ ul {
 	color: #fff;
 }
 
-
-
 .center {
 	text-align: center;
 }
-
-
 
 .confidential {
 	> li {
@@ -460,8 +440,6 @@ ul {
 	}
 }
 
-
-
 .dot_type_1 {
 	background-color: $c_bg__grey_dark;
 	border-radius: 50%;
@@ -469,8 +447,6 @@ ul {
 	height: 21px;
 	width: 21px;
 }
-
-
 
 .gal_2017__menu_days {
 	@media #{$mobile} {
@@ -522,8 +498,6 @@ ul {
 	}
 }
 
-
-
 .h1 {
 	@extend h1;
 }
@@ -559,8 +533,6 @@ ul {
 	}
 }
 
-
-
 .info_covid {
 	background-color: $c_main;
 	color: #fff;
@@ -583,8 +555,6 @@ ul {
 	display: none;
 }
 
-
-
 .infraholl__block {
 	padding: 0 110px;
 
@@ -596,8 +566,6 @@ ul {
 		padding: 0;
 	}
 }
-
-
 
 .item-image {
 	height: 210px;
@@ -765,14 +733,10 @@ ul {
 	&__speakers {}
 }
 
-
-
 .js-img_scroll {
 	height: 1px;
 	width: 1px;
 }
-
-
 
 .lang_change {
 	background-color: $c_text__grey;
@@ -808,8 +772,6 @@ ul {
 		}
 	}
 }
-
-
 
 .lang_ru {
 	.credits__logo_en {
@@ -863,8 +825,6 @@ ul {
 	}
 }
 
-
-
 // link_arh [START]
 .link_arh,
 .link_arh:visited {
@@ -889,8 +849,6 @@ ul {
 
 .link_arh_ru {}
 // link_arh [END]
-
-
 
 .link_rosinfra,
 .link_rosinfra:visited {
@@ -923,8 +881,6 @@ ul {
 	}
 }
 
-
-
 .m10px {
 	margin: 10px;
 }
@@ -950,8 +906,6 @@ ul {
 .nav_more {
 	display: none;
 }
-
-
 
 .p_conditions {
 	h1 {
@@ -1014,8 +968,6 @@ ul {
 		text-align: left;
 	}
 }
-
-
 
 // p3transport_link [START]
 .p3transport_link,
@@ -1245,6 +1197,37 @@ ul {
 	display: none;
 }
 
+.popup {
+	display: none;
+	position: fixed;
+
+	&::before {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	&.active {
+		display: flex;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 3;
+	}
+}
+
+.popup_close {
+	border-radius: 50%;
+	height: 30px;
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	width: 30px;
+}
+
 .popup_covid {
 	align-items: center;
 	display: none;
@@ -1349,8 +1332,6 @@ ul {
 	}
 }
 
-
-
 .quote {
 	padding: 30px 0;
 	position: relative;
@@ -1386,8 +1367,6 @@ ul {
 		}
 	}
 }
-
-
 
 .reg_block {
 	background-color: $c_main;
@@ -1437,12 +1416,8 @@ ul {
 	}
 }
 
-
-
 // used in JS to change src at images for retina display
 .retina {}
-
-
 
 .social_buttons {
 	display: inline-block;
@@ -1491,8 +1466,6 @@ ul {
 	}
 }
 
-
-
 .vbox-content {
 	height: 90%;
 }
@@ -1503,8 +1476,6 @@ ul {
 	}
 }
 
-
-
 .wrap {
 	margin: 0 auto;
 	max-width: 1000px;
@@ -1512,5 +1483,3 @@ ul {
 	width: 100%;
 }
 // help classes [END]
-
-

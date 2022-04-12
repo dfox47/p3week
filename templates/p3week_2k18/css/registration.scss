@@ -16,15 +16,15 @@
 
 	select {
 		cursor: pointer;
+		padding: .5em 1em;
 	}
 
 	&__label {
 		align-items: center;
 		display: flex;
+		flex-wrap: wrap;
 		margin: 0 0 20px;
 	}
-
-	&__select {}
 
 	&__title {
 		display: inline-block;
@@ -57,10 +57,10 @@
 	&__box {
 		border: 1px solid #000;
 		display: inline-block;
-		height: 12px;
+		height: 24px;
 		margin: 0 8px 0 0;
 		vertical-align: middle;
-		width: 12px;
+		width: 24px;
 	}
 
 	&__title {}

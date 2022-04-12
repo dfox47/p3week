@@ -5,14 +5,14 @@
 			<label class="reg_form__label">
 				<span class="reg_form__title">Категории</span>
 
-				<select class="reg_form__select js-reg-category" name="category">
-					<option value="type1">Стандарт</option>
-					<option value="type2">Бизнес</option>
-					<option value="type3">Премиум</option>
-					<option value="type4">VIP</option>
-					<option value="type5">Органы власти</option>
-					<option value="type6">Бюджетные организации</option>
-					<option value="type7">СМИ</option>
+				<select class="js-reg-category" name="category">
+					<option value="type1" data-price="23900">Стандарт</option>
+					<option value="type2" data-price="40900">Бизнес</option>
+					<option value="type3" data-price="57900">Премиум</option>
+					<option value="type4" data-price="98900">VIP</option>
+					<option value="type5" data-price="0">Органы власти</option>
+					<option value="type6" data-price="40900">Бюджетные организации</option>
+					<option value="type7" data-price="0">СМИ</option>
 				</select>
 			</label>
 
@@ -138,4 +138,23 @@
 			</div>
 		</div>
 	</form>
+
+	<div class="popup js-popup">
+		<div class="popup__content">
+			<div class="popup_close js-popup-close"></div>
+
+			<p>
+				Благодарим Вас за регистрацию, Ваша заявка ожидает подтверждения.
+			</p>
+
+			<p>
+				Вся информация будет направлена на указанный электронный адрес.
+			</p>
+
+			<p>
+				Для уточнения информации Вы можете обратиться по тел или почте:<br />
+				<a class="phone" href="javascript:void(0);">+7 (495) 988-77-13</a> / <a href="mailto:info@p3week.ru">info@p3week.ru</a>
+			</p>
+		</div>
+	</div>
 </div>
