@@ -1,34 +1,17 @@
 
-const regCategory   = document.querySelector('.js-reg-category')
-const regDays       = document.querySelectorAll('.js-reg-days')
-const regPrice      = document.querySelector('.js-reg-price')
-const regStep       = document.querySelectorAll('.js-reg-step-show')
-const regSteps      = document.querySelectorAll('.js-reg-step')
+const regCategory       = document.querySelector('.js-reg-category')
+const regDays           = document.querySelectorAll('.js-reg-days')
+const regEducationDay   = document.querySelector('.js-reg-education-day')
+const regPrice          = document.querySelector('.js-reg-price')
+const regStep           = document.querySelectorAll('.js-reg-step-show')
+const regSteps          = document.querySelectorAll('.js-reg-step')
 
-// set price at page load
-regPrice.innerHTML = regCategory.options[regCategory.selectedIndex].dataset.price
-
-regStep.forEach((item) => {
-	item.addEventListener('click', (e) => {
-		e.preventDefault()
-		const step = e.target.dataset.step
-
-		// hide all steps
-		regSteps.forEach( (step) => {
-			step.classList.remove('active')
-		})
-
-		// show selected step
-		document.querySelector('.js-reg-step[data-step="' + step + '"]').classList.add('active')
-	})
-})
-
-// category selection
+// category change
 regCategory.addEventListener('change', (e) => {
 	const selectedCategory = e.target.value
 
-	// set price after category changed
-	regPrice.innerHTML = e.target.options[e.target.selectedIndex].dataset.price;
+	// update total price after category changed
+	calcTotal()
 
 	// Standard
 	if ( selectedCategory === 'type1' ) {
@@ -67,8 +50,6 @@ regDays.forEach((item, indexDay) => {
 	item.addEventListener('change', () => {
 		const selectedCategory = regCategory.value
 
-		console.log('index | ', indexDay)
-
 		// Standard
 		if ( selectedCategory === 'type1') {
 			regDays.forEach(regDay => {
@@ -94,3 +75,34 @@ regDays.forEach((item, indexDay) => {
 		}
 	})
 })
+
+// update total price after educational day selected/unselected
+regEducationDay.addEventListener('change', () => {
+	calcTotal()
+})
+
+// steps
+regStep.forEach((item) => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault()
+		const step = e.target.dataset.step
+
+		// hide all steps
+		regSteps.forEach( (step) => {
+			step.classList.remove('active')
+		})
+
+		// show selected step
+		document.querySelector('.js-reg-step[data-step="' + step + '"]').classList.add('active')
+	})
+})
+
+// set price at page load
+calcTotal()
+
+function calcTotal() {
+	let categoryPrice   = parseInt(regCategory.options[regCategory.selectedIndex].dataset.price)
+	let educationalDay  = parseInt(regEducationDay.checked ? regEducationDay.dataset.price : 0)
+
+	regPrice.innerHTML  = categoryPrice + educationalDay
+}

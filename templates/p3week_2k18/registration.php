@@ -17,13 +17,6 @@
 			</label>
 
 			<div class="reg_form__label">
-				<div class="reg_form__title">Стоимость</div>
-				<div>
-					<span class="reg_price js-reg-price">0</span>&nbsp;руб.
-				</div>
-			</div>
-
-			<div class="reg_form__label">
 				<div class="reg_form__title">Выберите, какие дни вы планируете посетить:</div>
 
 				<label class="reg_form_checkbox">
@@ -141,7 +134,7 @@
 					<div class="reg_form__title">Хотите добавить к вашему тарифу посещение образовательного дня?</div>
 
 					<label class="reg_form_checkbox">
-						<input class="js-reg-days" type="checkbox" name="reg_edu_day" />
+						<input class="js-reg-education-day" type="checkbox" name="reg_edu_day" data-price="27900" />
 						<span class="reg_form_checkbox__box"></span>
 						<span class="reg_form_checkbox__title">Да</span>
 					</label>
@@ -151,6 +144,13 @@
 			<div class="reg_buttons">
 				<button class="reg_btn js-reg-step-show" data-step="1">Назад</button>
 				<button class="reg_btn js-reg-step-show" data-step="3">Продолжить</button>
+			</div>
+		</div>
+
+		<div class="reg_total">
+			<div class="reg_total__title">Стоимость</div>
+			<div class="reg_total__price">
+				<span class="js-reg-price">0</span>&nbsp;руб.
 			</div>
 		</div>
 	</form>
