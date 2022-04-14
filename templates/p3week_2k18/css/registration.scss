@@ -20,6 +20,10 @@
 	width: 100%;
 }
 
+.reg_category_desc {
+	opacity: .5;
+}
+
 .reg_form {
 	display: flex;
 	flex-direction: column;
@@ -60,14 +64,6 @@
 	}
 }
 
-.reg_form_category_desc {
-	display: none;
-
-	&.active {
-		display: block;
-	}
-}
-
 .reg_form_checkbox {
 	align-items: center;
 	cursor: pointer;
@@ -98,7 +94,7 @@
 	&__title {}
 }
 
-.reg_form_days {
+.reg_special_block {
 	display: none;
 
 	&.active {

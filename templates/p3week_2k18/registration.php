@@ -3,6 +3,7 @@
 	<form class="reg_form">
 		<!-- step 1 -->
 		<div class="reg_step active js-reg-step" data-step="1">
+			<!-- Категории -->
 			<label class="reg_form__label">
 				<span class="reg_form__title">Выберите категорию:</span>
 
@@ -17,7 +18,8 @@
 				</select>
 			</label>
 
-			<div class="reg_form_days js-reg-days" data-day-type="any">
+			<!-- Дни -->
+			<div class="reg_special_block js-reg-days" data-day-type="any">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Выберите, какие дни вы планируете посетить:</div>
 
@@ -43,21 +45,23 @@
 				<div class="reg_form__label">
 					<div class="reg_form__title"></div>
 
-					<div class="reg_form_category_desc js-reg-category-desc" data-category-type="standard">Только один день на выбор 12-14 сентября</div>
-					<div class="reg_form_category_desc js-reg-category-desc" data-category-type="business">Любые два дня на выбор 12-14 сентября</div>
-					<div class="reg_form_category_desc js-reg-category-desc" data-category-type="premium">12-14 сентября</div>
-					<div class="reg_form_category_desc js-reg-category-desc" data-category-type="vip">12-15 сентября</div>
+					<div class="reg_category_desc">
+						<div class="reg_special_block js-reg-category-desc" data-category-type="standard">Только один день на выбор 12-14 сентября</div>
+						<div class="reg_special_block js-reg-category-desc" data-category-type="business">Любые два дня на выбор 12-14 сентября</div>
+						<div class="reg_special_block js-reg-category-desc" data-category-type="premium">12-14 сентября</div>
+						<div class="reg_special_block js-reg-category-desc" data-category-type="vip">12-15 сентября</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="reg_form_days js-reg-days" data-day-type="business">
+			<div class="reg_special_block js-reg-days" data-day-type="business">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Доступные дни:</div>
 					<div>Только деловая программа</div>
 				</div>
 			</div>
 
-			<div class="reg_form_days js-reg-days" data-day-type="vip">
+			<div class="reg_special_block js-reg-days" data-day-type="vip">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Доступные дни:</div>
 					<div>4 дня + доп.опции</div>
@@ -108,7 +112,9 @@
 				<input type="text" name="reg_status" />
 			</label>
 
-			<h2>Реквизиты</h2>
+			<div class="reg_special_block">
+				<h2>Реквизиты</h2>
+			</div>
 
 			<label class="reg_form__label">
 				<span class="reg_form__title">Наименование организации</span>

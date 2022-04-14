@@ -8,6 +8,41 @@ const regPrice          = document.querySelector('.js-reg-price')
 const regStep           = document.querySelectorAll('.js-reg-step-show')
 const regSteps          = document.querySelectorAll('.js-reg-step')
 
+
+
+let availableDays = () => {
+	regDaysBlocks.forEach((block) => {
+		if (regCategory.options[regCategory.selectedIndex].dataset.days === block.dataset.dayType) {
+			block.classList.add('active')
+
+			return
+		}
+
+		block.classList.remove('active')
+	})
+}
+
+let calcTotal = () => {
+	let categoryPrice   = parseInt(regCategory.options[regCategory.selectedIndex].dataset.price)
+	let educationalDay  = parseInt(regEducationDay.checked ? regEducationDay.dataset.price : 0)
+
+	regPrice.innerHTML  = categoryPrice + educationalDay
+}
+
+let categoryDesc = () => {
+	regCategoryDesc.forEach((desc) => {
+		if (regCategory.options[regCategory.selectedIndex].dataset.category === desc.dataset.categoryType) {
+			desc.classList.add('active')
+
+			return
+		}
+
+		desc.classList.remove('active')
+	})
+}
+
+
+
 // category change
 regCategory.addEventListener('change', (e) => {
 	const selectedCategory = e.target.value
@@ -105,6 +140,8 @@ regStep.forEach((item) => {
 	})
 })
 
+
+
 // show days
 availableDays()
 
@@ -113,34 +150,3 @@ calcTotal()
 
 // show category description
 categoryDesc()
-
-function availableDays() {
-	regDaysBlocks.forEach((block) => {
-		if (regCategory.options[regCategory.selectedIndex].dataset.days === block.dataset.dayType) {
-			block.classList.add('active')
-
-			return
-		}
-
-		block.classList.remove('active')
-	})
-}
-
-function calcTotal() {
-	let categoryPrice   = parseInt(regCategory.options[regCategory.selectedIndex].dataset.price)
-	let educationalDay  = parseInt(regEducationDay.checked ? regEducationDay.dataset.price : 0)
-
-	regPrice.innerHTML  = categoryPrice + educationalDay
-}
-
-function categoryDesc() {
-	regCategoryDesc.forEach((desc) => {
-		if (regCategory.options[regCategory.selectedIndex].dataset.category === desc.dataset.categoryType) {
-			desc.classList.add('active')
-
-			return
-		}
-
-		desc.classList.remove('active')
-	})
-}
