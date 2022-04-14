@@ -3,6 +3,7 @@ const regCategory       = document.querySelector('.js-reg-category')
 const regCategoryDesc   = document.querySelectorAll('.js-reg-category-desc')
 const regDays           = document.querySelectorAll('.js-reg-day')
 const regDaysBlocks     = document.querySelectorAll('.js-reg-days')
+const regEduDay         = document.querySelectorAll('.js-edu-day')
 const regEducationDay   = document.querySelector('.js-reg-education-day')
 const regPrice          = document.querySelector('.js-reg-price')
 const regStep           = document.querySelectorAll('.js-reg-step-show')
@@ -41,20 +42,30 @@ let categoryDesc = () => {
 	})
 }
 
+let educationalDay = () => {
+	regEduDay.forEach((day) => {
+		if (regCategory.options[regCategory.selectedIndex].dataset.eduDay === day.dataset.eduDay) {
+			day.classList.add('active')
+
+			return
+		}
+
+		console.log('here')
+
+		day.classList.remove('active')
+	})
+}
+
 
 
 // category change
 regCategory.addEventListener('change', (e) => {
 	const selectedCategory = e.target.value
 
-	// update available days
 	availableDays()
-
-	// update total price
 	calcTotal()
-
-	// update category description
 	categoryDesc()
+	educationalDay()
 
 	// Standard
 	if ( selectedCategory === 'type1' ) {
@@ -150,3 +161,6 @@ calcTotal()
 
 // show category description
 categoryDesc()
+
+// show info about educational day
+educationalDay()

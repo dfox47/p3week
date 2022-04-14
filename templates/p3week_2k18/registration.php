@@ -8,13 +8,13 @@
 				<span class="reg_form__title">Выберите категорию:</span>
 
 				<select class="js-reg-category" name="category">
-					<option value="type1" data-price="23900" data-days="any" data-category="standard">Стандарт</option>
-					<option value="type2" data-price="40900" data-days="any" data-category="business">Бизнес</option>
-					<option value="type3" data-price="57900" data-days="any" data-category="premium">Премиум</option>
-					<option value="type4" data-price="98900" data-days="vip" data-category="vip">VIP</option>
-					<option value="type5" data-price="0" data-days="business">Органы власти</option>
-					<option value="type6" data-price="40900" data-days="business">Бюджетные организации</option>
-					<option value="type7" data-price="0" data-days="business">СМИ</option>
+					<option value="type1" data-price="23900" data-days="any" data-category="standard" data-edu-day="true">Стандарт</option>
+					<option value="type2" data-price="40900" data-days="any" data-category="business" data-edu-day="true">Бизнес</option>
+					<option value="type3" data-price="57900" data-days="any" data-category="premium" data-edu-day="true">Премиум</option>
+					<option value="type4" data-price="98900" data-days="vip" data-category="vip" data-edu-day="false">VIP</option>
+					<option value="type5" data-price="0" data-days="business" data-edu-day="true">Органы власти</option>
+					<option value="type6" data-price="40900" data-days="business" data-edu-day="true">Бюджетные организации</option>
+					<option value="type7" data-price="0" data-days="business" data-edu-day="true">СМИ</option>
 				</select>
 			</label>
 
@@ -161,7 +161,7 @@
 				<input type="text" name="reg_ks" />
 			</label>
 
-			<div class="js-hide-for-vip">
+			<div class="reg_special_block js-edu-day" data-edu-day="true">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Хотите добавить к вашему тарифу посещение образовательного дня?</div>
 
