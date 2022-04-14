@@ -54,7 +54,7 @@
 				</div>
 			</div>
 
-			<div class="reg_special_block js-reg-show-at-category" data-category="business government budget_org media">
+			<div class="reg_special_block js-reg-show-at-category" data-category="government budget_org media">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Доступные дни:</div>
 					<div>Только деловая программа</div>
