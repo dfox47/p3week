@@ -112,54 +112,54 @@
 				<input type="text" name="reg_status" />
 			</label>
 
-			<div class="reg_special_block">
+			<div class="reg_special_block js-reg-show-at-category" data-category="standard business premium vip budget_org">
 				<h2>Реквизиты</h2>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">Наименование организации</span>
+					<input type="text" name="reg_org_name" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">Адрес организации</span>
+					<input type="text" name="reg_org_address" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">ИНН</span>
+					<input type="text" name="reg_inn" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">КПП</span>
+					<input type="text" name="reg_kpp" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">ОГРН</span>
+					<input type="text" name="reg_ogrn" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">р/с</span>
+					<input type="text" name="reg_rs" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">Наименование банка</span>
+					<input type="text" name="reg_bank_name" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">БИК</span>
+					<input type="text" name="reg_bik" />
+				</label>
+
+				<label class="reg_form__label">
+					<span class="reg_form__title">к/с</span>
+					<input type="text" name="reg_ks" />
+				</label>
 			</div>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">Наименование организации</span>
-				<input type="text" name="reg_org_name" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">Адрес организации</span>
-				<input type="text" name="reg_org_address" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">ИНН</span>
-				<input type="text" name="reg_inn" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">КПП</span>
-				<input type="text" name="reg_kpp" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">ОГРН</span>
-				<input type="text" name="reg_ogrn" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">р/с</span>
-				<input type="text" name="reg_rs" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">Наименование банка</span>
-				<input type="text" name="reg_bank_name" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">БИК</span>
-				<input type="text" name="reg_bik" />
-			</label>
-
-			<label class="reg_form__label">
-				<span class="reg_form__title">к/с</span>
-				<input type="text" name="reg_ks" />
-			</label>
 
 			<div class="reg_special_block js-reg-show-at-category" data-category="standard business premium government budget_org media">
 				<div class="reg_form__label">
