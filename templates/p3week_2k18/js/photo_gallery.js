@@ -1,14 +1,12 @@
-var $ = jQuery.noConflict();
 
-var day;
+let day
 
-var day_1;
-var day_2;
-var day_3;
-var day_4;
-var day_all;
-
-var selected_day;
+let day_1
+let day_2
+let day_3
+let day_4
+let day_all
+let selected_day
 
 
 
@@ -171,13 +169,9 @@ function current_day_on_load() {
 			});
 		}
 
-
-
 		$('.gal_menu_days').find('li').removeClass('active');
 		$('.gal_menu_days').find('li').find('a[data-day="' + day + '"]').parent().addClass('active');
 	}
-
-	console.log( day );
 }
 
 current_day_on_load();

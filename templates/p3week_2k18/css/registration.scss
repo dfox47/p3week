@@ -60,6 +60,14 @@
 	}
 }
 
+.reg_form_category_desc {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
 .reg_form_checkbox {
 	align-items: center;
 	cursor: pointer;
