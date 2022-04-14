@@ -39,10 +39,6 @@
 						<span class="reg_form_checkbox__title">14 сентября</span>
 					</label>
 				</div>
-
-				<div class="reg_buttons">
-					<button class="reg_btn js-reg-step-show" data-step="2">Продолжить</button>
-				</div>
 			</div>
 
 			<div class="reg_form_days js-reg-days" data-day-type="business">
@@ -57,6 +53,10 @@
 					<div class="reg_form__title">Доступные дни:</div>
 					<div>4 дня + доп.опции</div>
 				</div>
+			</div>
+
+			<div class="reg_buttons">
+				<button class="reg_btn js-reg-step-show" data-step="2">Продолжить</button>
 			</div>
 		</div>
 

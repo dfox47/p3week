@@ -66,7 +66,7 @@ regDays.forEach((item, indexDay) => {
 		}
 
 		// Business
-		if ( selectedCategory === 'type2') {
+		if ( selectedCategory === 'type2x') {
 			regDays.forEach((regDay, i) => {
 				regDay.checked = false
 
@@ -109,8 +109,6 @@ calcTotal()
 
 function availableDays() {
 	const showDaysBlock = regCategory.options[regCategory.selectedIndex].dataset.days
-
-	console.log('showDaysBlock | ', showDaysBlock)
 
 	regDaysBlocks.forEach((block) => {
 		if (showDaysBlock === block.dataset.dayType) {
