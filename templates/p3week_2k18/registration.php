@@ -8,18 +8,18 @@
 				<span class="reg_form__title">Выберите категорию:</span>
 
 				<select class="js-reg-category" name="category">
-					<option value="type1" data-price="23900" data-days="any" data-category="standard" data-edu-day="true">Стандарт</option>
-					<option value="type2" data-price="40900" data-days="any" data-category="business" data-edu-day="true">Бизнес</option>
-					<option value="type3" data-price="57900" data-days="any" data-category="premium" data-edu-day="true">Премиум</option>
-					<option value="type4" data-price="98900" data-days="vip" data-category="vip" data-edu-day="false">VIP</option>
-					<option value="type5" data-price="0" data-days="business" data-edu-day="true">Органы власти</option>
-					<option value="type6" data-price="40900" data-days="business" data-edu-day="true">Бюджетные организации</option>
-					<option value="type7" data-price="0" data-days="business" data-edu-day="true">СМИ</option>
+					<option value="type1" data-price="23900" data-days="any" data-category="standard">Стандарт</option>
+					<option value="type2" data-price="40900" data-days="any" data-category="business">Бизнес</option>
+					<option value="type3" data-price="57900" data-days="any" data-category="premium">Премиум</option>
+					<option value="type4" data-price="98900" data-days="vip" data-category="vip">VIP</option>
+					<option value="type5" data-price="0" data-days="business" data-category="government">Органы власти</option>
+					<option value="type6" data-price="40900" data-days="business" data-category="budget_org">Бюджетные организации</option>
+					<option value="type7" data-price="0" data-days="business" data-category="media">СМИ</option>
 				</select>
 			</label>
 
 			<!-- Дни -->
-			<div class="reg_special_block js-reg-days" data-day-type="any">
+			<div class="reg_special_block js-reg-show-at-category" data-category="standard business premium">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Выберите, какие дни вы планируете посетить:</div>
 
@@ -46,22 +46,22 @@
 					<div class="reg_form__title"></div>
 
 					<div class="reg_category_desc">
-						<div class="reg_special_block js-reg-category-desc" data-category-type="standard">Только один день на выбор 12-14 сентября</div>
-						<div class="reg_special_block js-reg-category-desc" data-category-type="business">Любые два дня на выбор 12-14 сентября</div>
-						<div class="reg_special_block js-reg-category-desc" data-category-type="premium">12-14 сентября</div>
-						<div class="reg_special_block js-reg-category-desc" data-category-type="vip">12-15 сентября</div>
+						<div class="reg_special_block js-reg-show-at-category" data-category="standard">Только один день на выбор 12-14 сентября</div>
+						<div class="reg_special_block js-reg-show-at-category" data-category="business">Любые два дня на выбор 12-14 сентября</div>
+						<div class="reg_special_block js-reg-show-at-category" data-category="premium">12-14 сентября</div>
+						<div class="reg_special_block js-reg-show-at-category" data-category="vip">12-15 сентября</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="reg_special_block js-reg-days" data-day-type="business">
+			<div class="reg_special_block js-reg-show-at-category" data-category="business government budget_org media">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Доступные дни:</div>
 					<div>Только деловая программа</div>
 				</div>
 			</div>
 
-			<div class="reg_special_block js-reg-days" data-day-type="vip">
+			<div class="reg_special_block js-reg-show-at-category" data-category="vip">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Доступные дни:</div>
 					<div>4 дня + доп.опции</div>
@@ -161,7 +161,7 @@
 				<input type="text" name="reg_ks" />
 			</label>
 
-			<div class="reg_special_block js-edu-day" data-edu-day="true">
+			<div class="reg_special_block js-reg-show-at-category" data-category="standard business premium government budget_org media">
 				<div class="reg_form__label">
 					<div class="reg_form__title">Хотите добавить к вашему тарифу посещение образовательного дня?</div>
 

@@ -1,19 +1,17 @@
 
 const regCategory       = document.querySelector('.js-reg-category')
-const regCategoryDesc   = document.querySelectorAll('.js-reg-category-desc')
 const regDays           = document.querySelectorAll('.js-reg-day')
-const regDaysBlocks     = document.querySelectorAll('.js-reg-days')
-const regEduDay         = document.querySelectorAll('.js-edu-day')
 const regEducationDay   = document.querySelector('.js-reg-education-day')
 const regPrice          = document.querySelector('.js-reg-price')
+const regShowAtCat      = document.querySelectorAll('.js-reg-show-at-category')
 const regStep           = document.querySelectorAll('.js-reg-step-show')
 const regSteps          = document.querySelectorAll('.js-reg-step')
 
 
 
-let availableDays = () => {
-	regDaysBlocks.forEach((block) => {
-		if (regCategory.options[regCategory.selectedIndex].dataset.days === block.dataset.dayType) {
+let showAtCategory = () => {
+	regShowAtCat.forEach((block) => {
+		if ( block.dataset.category.includes(regCategory.options[regCategory.selectedIndex].dataset.category) ) {
 			block.classList.add('active')
 
 			return
@@ -30,42 +28,14 @@ let calcTotal = () => {
 	regPrice.innerHTML  = categoryPrice + educationalDay
 }
 
-let categoryDesc = () => {
-	regCategoryDesc.forEach((desc) => {
-		if (regCategory.options[regCategory.selectedIndex].dataset.category === desc.dataset.categoryType) {
-			desc.classList.add('active')
-
-			return
-		}
-
-		desc.classList.remove('active')
-	})
-}
-
-let educationalDay = () => {
-	regEduDay.forEach((day) => {
-		if (regCategory.options[regCategory.selectedIndex].dataset.eduDay === day.dataset.eduDay) {
-			day.classList.add('active')
-
-			return
-		}
-
-		console.log('here')
-
-		day.classList.remove('active')
-	})
-}
-
 
 
 // category change
 regCategory.addEventListener('change', (e) => {
 	const selectedCategory = e.target.value
 
-	availableDays()
 	calcTotal()
-	categoryDesc()
-	educationalDay()
+	showAtCategory()
 
 	// Standard
 	if ( selectedCategory === 'type1' ) {
@@ -153,14 +123,7 @@ regStep.forEach((item) => {
 
 
 
-// show days
-availableDays()
-
 // set price
 calcTotal()
 
-// show category description
-categoryDesc()
-
-// show info about educational day
-educationalDay()
+showAtCategory()
