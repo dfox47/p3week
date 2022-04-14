@@ -90,6 +90,14 @@
 	&__title {}
 }
 
+.reg_form_days {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
 .reg_step {
 	display: none;
 

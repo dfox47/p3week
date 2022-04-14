@@ -1,45 +1,62 @@
 
 <div class="wrap">
 	<form class="reg_form">
+		<!-- step 1 -->
 		<div class="reg_step active js-reg-step" data-step="1">
 			<label class="reg_form__label">
 				<span class="reg_form__title">Категории</span>
 
 				<select class="js-reg-category" name="category">
-					<option value="type1" data-price="23900">Стандарт</option>
-					<option value="type2" data-price="40900">Бизнес</option>
-					<option value="type3" data-price="57900">Премиум</option>
-					<option value="type4" data-price="98900">VIP</option>
-					<option value="type5" data-price="0">Органы власти</option>
-					<option value="type6" data-price="40900">Бюджетные организации</option>
-					<option value="type7" data-price="0">СМИ</option>
+					<option value="type1" data-price="23900" data-days="any">Стандарт</option>
+					<option value="type2" data-price="40900" data-days="any">Бизнес</option>
+					<option value="type3" data-price="57900" data-days="any">Премиум</option>
+					<option value="type4" data-price="98900" data-days="vip">VIP</option>
+					<option value="type5" data-price="0" data-days="business">Органы власти</option>
+					<option value="type6" data-price="40900" data-days="business">Бюджетные организации</option>
+					<option value="type7" data-price="0" data-days="business">СМИ</option>
 				</select>
 			</label>
 
-			<div class="reg_form__label">
-				<div class="reg_form__title">Выберите, какие дни вы планируете посетить:</div>
+			<div class="reg_form_days js-reg-days" data-day-type="any">
+				<div class="reg_form__label">
+					<div class="reg_form__title">Выберите, какие дни вы планируете посетить:</div>
 
-				<label class="reg_form_checkbox">
-					<input class="js-reg-days" type="checkbox" name="day1" />
-					<span class="reg_form_checkbox__box"></span>
-					<span class="reg_form_checkbox__title">12 сентября</span>
-				</label>
+					<label class="reg_form_checkbox">
+						<input class="js-reg-day" type="checkbox" name="day1" />
+						<span class="reg_form_checkbox__box"></span>
+						<span class="reg_form_checkbox__title">12 сентября</span>
+					</label>
 
-				<label class="reg_form_checkbox">
-					<input class="js-reg-days" type="checkbox" name="day2" />
-					<span class="reg_form_checkbox__box"></span>
-					<span class="reg_form_checkbox__title">13 сентября</span>
-				</label>
+					<label class="reg_form_checkbox">
+						<input class="js-reg-day" type="checkbox" name="day2" />
+						<span class="reg_form_checkbox__box"></span>
+						<span class="reg_form_checkbox__title">13 сентября</span>
+					</label>
 
-				<label class="reg_form_checkbox">
-					<input class="js-reg-days" type="checkbox" name="day3" />
-					<span class="reg_form_checkbox__box"></span>
-					<span class="reg_form_checkbox__title">14 сентября</span>
-				</label>
+					<label class="reg_form_checkbox">
+						<input class="js-reg-day" type="checkbox" name="day3" />
+						<span class="reg_form_checkbox__box"></span>
+						<span class="reg_form_checkbox__title">14 сентября</span>
+					</label>
+				</div>
+
+				<div class="reg_buttons">
+					<button class="reg_btn js-reg-step-show" data-step="2">Продолжить</button>
+				</div>
 			</div>
 
-			<div class="reg_buttons">
-				<button class="reg_btn js-reg-step-show" data-step="2">Продолжить</button>
+			<div class="reg_form_days js-reg-days" data-day-type="business">
+				<div class="reg_form__label">
+					<div class="reg_form__title">Доступные дни:</div>
+					<div>Только деловая программа</div>
+				</div>
+			</div>
+
+			<div class="reg_form_days js-reg-days" data-day-type="vip">
+				<div class="reg_form__label">
+					<div class="reg_form__title">Доступные дни:</div>
+					<div>4 дня + доп.опции</div>
+				</div>
 			</div>
 		</div>
 

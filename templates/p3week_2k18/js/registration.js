@@ -1,6 +1,7 @@
 
 const regCategory       = document.querySelector('.js-reg-category')
-const regDays           = document.querySelectorAll('.js-reg-days')
+const regDays           = document.querySelectorAll('.js-reg-day')
+const regDaysBlocks     = document.querySelectorAll('.js-reg-days')
 const regEducationDay   = document.querySelector('.js-reg-education-day')
 const regPrice          = document.querySelector('.js-reg-price')
 const regStep           = document.querySelectorAll('.js-reg-step-show')
@@ -9,6 +10,9 @@ const regSteps          = document.querySelectorAll('.js-reg-step')
 // category change
 regCategory.addEventListener('change', (e) => {
 	const selectedCategory = e.target.value
+
+	// update available days after category changed
+	availableDays()
 
 	// update total price after category changed
 	calcTotal()
@@ -97,8 +101,27 @@ regStep.forEach((item) => {
 	})
 })
 
+// show days at page load
+availableDays()
+
 // set price at page load
 calcTotal()
+
+function availableDays() {
+	const showDaysBlock = regCategory.options[regCategory.selectedIndex].dataset.days
+
+	console.log('showDaysBlock | ', showDaysBlock)
+
+	regDaysBlocks.forEach((block) => {
+		if (showDaysBlock === block.dataset.dayType) {
+			block.classList.add('active')
+
+			return
+		}
+
+		block.classList.remove('active')
+	})
+}
 
 function calcTotal() {
 	let categoryPrice   = parseInt(regCategory.options[regCategory.selectedIndex].dataset.price)
