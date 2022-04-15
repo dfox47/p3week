@@ -21,10 +21,10 @@ let remoteFolderCss     = remoteFolder + 'css/'
 let remoteFolderJs      = remoteFolder + 'js/'
 let remoteFolderLang    = '/www/p3week.ru/language/overrides/'
 
-let localFolder         = 'www/templates/p3week_2k18/'
+let localFolder         = 'templates/p3week_2k18/'
 let localFolderCss      = localFolder + 'css/'
 let localFolderJs       = localFolder + 'js/'
-let localFolderLang     = 'www/language/overrides/'
+let localFolderLang     = 'language/overrides/'
 
 
 
