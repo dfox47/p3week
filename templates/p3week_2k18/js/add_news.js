@@ -1,48 +1,45 @@
-var $ = jQuery;
 
-
+let $ = jQuery
 
 $(window).bind('load', function() {
 	$(document).on('paste', '#jform_title', function () {
 		setTimeout(function() {
-			var articleTitle        = $('#jform_title');
-			var articleContent      = $('#jform_articletext');
-			var articleDateCreated  = $('#jform_created');
-			var articleDatePublish  = $('#jform_publish_up');
-			var articleImg          = $('#jform_images_image_intro');
-			var articleReadMore     = '<hr id="system-readmore" />';
-			var articleAliasLabel   = $('#jform_alias-lbl');
+			let articleTitle        = $('#jform_title')
+			let articleContent      = $('#jform_articletext')
+			let articleDateCreated  = $('#jform_created')
+			let articleDatePublish  = $('#jform_publish_up')
+			let articleImg          = $('#jform_images_image_intro')
+			let articleReadMore     = '<hr id="system-readmore" />'
+			let articleAliasLabel   = $('#jform_alias-lbl')
 
-			var ext_url             = articleTitle.val();
+			let ext_url             = articleTitle.val()
 
 			if ( !ext_url.length && ~ext_url.indexOf('http') ) {
-				console.log('link is not correct or empty');
+				console.log('link is not correct or empty')
 
-				return false;
+				return false
 			}
 			else {
-				articleAliasLabel.text('...');
+				articleAliasLabel.text('...')
 			}
 
 
 
-			var host_http;
-			var hostname;
+			let host_http
+			let hostname
 
 			if (ext_url.indexOf("//") > -1) {
-				host_http   = ext_url.split('/')[0];
-				hostname    = ext_url.split('/')[2];
+				host_http   = ext_url.split('/')[0]
+				hostname    = ext_url.split('/')[2]
 			}
 			else {
-				host_http   = '';
-				hostname    = ext_url.split('/')[0];
+				host_http   = ''
+				hostname    = ext_url.split('/')[0]
 			}
 
+			let host_full = host_http + '//' + hostname
 
-
-			var host_full = host_http + '//' + hostname;
-
-			var linkOriginal = '<p>Источник: <a href="' + ext_url + '" target="_blank">' + hostname + '</a></p>';
+			let linkOriginal = '<p>Источник: <a href="' + ext_url + '" target="_blank">' + hostname + '</a></p>'
 
 			$.ajax({
 				method: 'POST',
@@ -51,15 +48,15 @@ $(window).bind('load', function() {
 					'ext_url': ext_url
 				},
 				success: function(data) {
-					var $h1                 = $(data).find('h1').html();
-					var $imgSrc             = $(data).find('.article__img').attr('src');
-					var $img                = '<img src="' + host_full + $imgSrc + '" alt="" />';
+					let $h1                 = $(data).find('h1').html()
+					let $imgSrc             = $(data).find('.article__img').attr('src')
+					let $img                = '<img src="' + host_full + $imgSrc + '" alt="" />'
 
-					var $dateFull           = $(data).find('.article__meta').find('.article__main');
-					$dateFull.find('.meta--dotted').remove();
-					$dateFull.find('.meta__time-changer').remove();
+					let $dateFull           = $(data).find('.article__meta').find('.article__main')
+					$dateFull.find('.meta--dotted').remove()
+					$dateFull.find('.meta__time-changer').remove()
 
-					var $date = $dateFull.text()
+					let $date = $dateFull.text()
 						.replace(/ /g, '')
 						.replace('г.', '')
 						.replace('января',      '-01-')
@@ -75,31 +72,27 @@ $(window).bind('load', function() {
 						.replace('ноября',      '-11-')
 						.replace('декабря',     '-12-')
 						.replace(/ /g, '')
-						.replace(/[^0-9-]/g, '');
+						.replace(/[^0-9-]/g, '')
 
-					var $content            = $(data).find('.article__textarea').html().replace(/<img.+">/g, '').replace(/ class="ql-align-justify"/g, '');
-					var $contentShort       = $(data).find('.article__textarea').find('p:first-of-type').html().replace(/<img.+">/g, '').replace(/ class="ql-align-justify"/g, '');
+					let $content            = $(data).find('.article__textarea').html().replace(/<img.+">/g, '').replace(/ class="ql-align-justify"/g, '')
+					let $contentShort       = $(data).find('.article__textarea').find('p:first-of-type').html().replace(/<img.+">/g, '').replace(/ class="ql-align-justify"/g, '')
 
+					articleDateCreated.val($date)
+					articleDatePublish.val($date)
+					articleTitle.val($h1)
+					articleImg.val(host_full + $imgSrc)
+					articleContent.val('<p>' + $contentShort + '</p>' + articleReadMore + $img + $content + linkOriginal)
 
+					articleDateCreated.focus()
+					articleDatePublish.focus()
+					articleDateCreated.focus()
 
-					articleDateCreated.val($date);
-					articleDatePublish.val($date);
-					articleTitle.val($h1);
-					articleImg.val(host_full + $imgSrc);
-					articleContent.val('<p>' + $contentShort + '</p>' + articleReadMore + $img + $content + linkOriginal);
-
-					articleDateCreated.focus();
-					articleDatePublish.focus();
-					articleDateCreated.focus();
-
-					$('.button-save-new').click();
+					$('.button-save-new').click()
 				},
 				error:function() {
-					console.log('Error');
+					console.log('Error')
 				}
-			});
-		}, 500);
-	});
-});
-
-
+			})
+		}, 500)
+	})
+})
