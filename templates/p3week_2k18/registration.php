@@ -175,7 +175,7 @@
 
 			<div class="reg_buttons">
 				<button class="reg_btn js-reg-step-show" data-step="1">Назад</button>
-				<button class="reg_btn js-reg-step-show" data-step="3">Продолжить</button>
+				<button class="reg_btn js-reg-create-bill">сформировать счет</button>
 			</div>
 		</div>
 

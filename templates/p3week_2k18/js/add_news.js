@@ -1,5 +1,5 @@
 
-let $ = jQuery
+var $ = jQuery
 
 $(window).bind('load', function() {
 	$(document).on('paste', '#jform_title', function () {
