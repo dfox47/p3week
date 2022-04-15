@@ -1,4 +1,5 @@
 
+var fs                  = require('fs');
 let concat              = require('gulp-concat')
 let config              = JSON.parse(fs.readFileSync('../config.json'))
 let cssMinify           = require('gulp-csso')
