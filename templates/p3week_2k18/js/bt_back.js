@@ -1,9 +1,8 @@
-var $ = jQuery.noConflict();
 
-$(window).bind('load', function() {
-	$('.bt_back').click(function() {
-		history.back(1);
-	});
-});
+let goBack = document.querySelectorAll('.bt_back')
 
-
+goBack.forEach((btn) => {
+	btn.addEventListener('click', () => {
+		history.back()
+	})
+})
