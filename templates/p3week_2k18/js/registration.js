@@ -1,3 +1,4 @@
+// const {html2pdf}        = require("./html2pdf.bundle.min")
 
 const regCategory       = document.querySelector('.js-reg-category')
 const regDays           = document.querySelectorAll('.js-reg-day')
@@ -10,12 +11,29 @@ const regSteps          = document.querySelectorAll('.js-reg-step')
 
 
 let calcTotal = () => {
-	if (regCategory === null) return
+	if (regCategory === null || regEducationDay === null) return
 
 	let categoryPrice   = parseInt(regCategory.options[regCategory.selectedIndex].dataset.price)
 	let educationalDay  = parseInt(regEducationDay.checked ? regEducationDay.dataset.price : 0)
 
 	regPrice.innerHTML  = categoryPrice + educationalDay
+}
+
+// all options https://ekoopmans.github.io/html2pdf.js/
+let generatePDF = () => {
+	const element = document.getElementById('invoice')
+	// html2pdf().from(element).save()
+
+	let options = {
+		margin:       1,
+		filename:     'myfile.pdf',
+		image:        { type: 'jpeg', quality: 0.98 },
+		html2canvas:  { scale: 2 },
+		jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+	}
+
+	html2pdf().set(options).from(element).save()
+	// html2pdf(element)
 }
 
 let showAtCategory = () => {
