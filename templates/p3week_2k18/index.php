@@ -165,6 +165,14 @@ unset(
 	</div>
 </div>
 
+<?php if (!isset($_SERVER['REQUEST_URI']) || ltrim($_SERVER['REQUEST_URI'],'/') === '') { ?>
+	<div class="home_video_new">
+		<video class="home_video_new__item" autoplay loop muted>
+			<source src="/images/2022/home.mp4" type="video/mp4" />
+		</video>
+	</div>
+<?php } ?>
+
 <?php if($this->countModules('search')) { ?>
 	<div class="search__wrap">
 		<div class="wrap">

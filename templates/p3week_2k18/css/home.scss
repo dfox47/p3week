@@ -95,3 +95,46 @@
 		z-index: 3;
 	}
 }
+
+.home_video_new {
+	display: flex;
+	height: 350px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	&::before {
+		background-color: rgba($c_header_bg, .5);
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 5;
+	}
+
+	&::after {
+		background-color: #000;
+		content: "";
+		height: 100%;
+		left: 0;
+		opacity: .5;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+	}
+
+	&__item {
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+}

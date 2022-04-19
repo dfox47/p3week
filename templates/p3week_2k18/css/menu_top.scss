@@ -1,11 +1,10 @@
 
-
-
-// menu_top [START]
 .menu_top {
 	background-color: $c_menu_bg;
 	font-size: 0;
+	position: relative;
 	width: 100%;
+	z-index: 3;
 
 	&__1 {
 		padding: 70px 0;
@@ -297,7 +296,6 @@
 		}
 	}
 }
-// menu_top [END]
 
 
 
@@ -470,5 +468,3 @@
 		}
 	}
 }
-
-

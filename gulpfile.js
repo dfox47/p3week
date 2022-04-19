@@ -77,7 +77,7 @@ gulp.task('js', function () {
 	return gulp.src([
 			// localFolderJs + 'jquery.3.2.1.js',
 			localFolderJs + 'owl.carousel.js',
-			localFolderJs + 'html2pdf.bundle.min.js',
+			localFolderJs + 'jspdf.min.js',
 			localFolderJs + '**/*.js'
 		])
 		.pipe(concat('all.js'))
