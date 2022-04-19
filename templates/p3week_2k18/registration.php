@@ -1,6 +1,23 @@
 
 <div class="wrap">
-	<form class="reg_form">
+	<button class="reg_btn js-reg-create-bill" onclick="generatePDF()">сформировать счет</button>
+
+	<div class="content-template">
+		<h3>Sample2 h3 tag</h3>
+		<p>Sample pararaph €€€€€</p>
+	</div>
+
+	<div id="invoice" style="background-color: green; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
+		<div>
+			<h1 style="color: #000; font-size: 20px;">Print it</h1>
+
+			<p>Some text</p>
+		</div>
+	</div>
+
+
+
+	<form class="reg_form" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
 		<!-- step 1 -->
 		<div class="reg_step active js-reg-step" data-step="1">
 			<!-- Категории -->
@@ -175,7 +192,7 @@
 
 			<div class="reg_buttons">
 				<button class="reg_btn js-reg-step-show" data-step="1">Назад</button>
-				<button class="reg_btn js-reg-create-bill">сформировать счет</button>
+				<button class="reg_btn js-reg-create-bill" onclick="generatePDF()">сформировать счет</button>
 			</div>
 		</div>
 
