@@ -1,0 +1,87 @@
+
+.lang_change {
+	background-color: $c_text__grey;
+	display: inline-block;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	width: 30px;
+
+	a,
+	a:visited {
+		color: $c_menu_bg;
+		display: inline-block;
+		font-family: $font_proxima_reg;
+		font-size: 16px;
+		line-height: 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	.active {
+		display: none;
+	}
+
+	@media #{$mobile} {
+		height: 25px;
+		width: 25px;
+
+		a,
+		a:visited {
+			line-height: 25px;
+		}
+	}
+}
+
+.lang_en {
+	.credits__logo_ru {
+		display: none!important;
+	}
+
+	.footer__logo_ru {
+		display: none;
+	}
+
+	.lang_ru_only {
+		display: none!important;
+	}
+
+	.link_arh_en {
+		display: block;
+	}
+
+	.partner_ru {
+		display: none;
+	}
+
+	.speakers_nav__ru {
+		display: none;
+	}
+}
+
+.lang_ru {
+	.credits__logo_en {
+		display: none!important;
+	}
+
+	.footer__logo_en {
+		display: none;
+	}
+
+	.lang_en_only {
+		display: none!important;
+	}
+
+	.link_arh_ru {
+		display: none;
+	}
+
+	.partner_en {
+		display: none;
+	}
+
+	.speakers_nav__en {
+		display: none;
+	}
+}
