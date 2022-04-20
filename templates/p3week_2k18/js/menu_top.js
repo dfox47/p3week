@@ -50,33 +50,33 @@ $(window).bind("load", function() {
 
 
 
-	var iScrollPos = 0;
+	let iScrollPos = 0;
 
 	function menu_top__show_on_mouse_scroll() {
-		var iCurScrollPos = $(this).scrollTop();
+		let iCurScrollPos = $(this).scrollTop()
 
 		// scroll down
 		if (iCurScrollPos > iScrollPos) {
-			$('html').removeClass("menu_top__fixed__show");
+			$('html').removeClass("menu_top__fixed__show")
 		}
 		// scroll up
 		else {
 			if ( !$('html').hasClass("menu_top__fixed__show") ) {
-				$('html').addClass("menu_top__fixed__show");
+				$('html').addClass("menu_top__fixed__show")
 			}
 		}
 
-		iScrollPos = iCurScrollPos;
+		iScrollPos = iCurScrollPos
 	}
 
 
-
-	function menu_top__fixed() {
-		if ( $(window).scrollTop() >= 60 ) {
-			$('html').addClass("menu_top__fixed");
-		}
-		else {
-			$('html').removeClass("menu_top__fixed");
-		}
-	}
-});
+	//
+	// let menu_top__fixed = () => {
+	// 	if ( $(window).scrollTop() >= 60 ) {
+	// 		$('html').addClass("menu_top__fixed")
+	// 	}
+	// 	else {
+	// 		$('html').removeClass("menu_top__fixed")
+	// 	}
+	// }
+})

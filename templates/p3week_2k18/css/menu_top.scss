@@ -87,10 +87,10 @@
 			top: -1000px;
 			transition: $transition;
 			z-index: 14;
-		}
 
-		.menu_top__spacer {
-			display: block;
+			&__spacer {
+				display: block;
+			}
 		}
 	}
 
