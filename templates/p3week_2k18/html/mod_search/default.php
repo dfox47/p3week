@@ -17,10 +17,7 @@
 				<input type="submit" value="<?php echo $text; ?>" />
 			</label>
 
-			<div class="search__close">
-				<span></span>
-				<span></span>
-			</div>
+			<div class="search__close js-search-toggle"></div>
 		</div>
 	</form>
 </div>

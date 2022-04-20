@@ -1,11 +1,9 @@
-var $ = jQuery.noConflict();
 
-$('.bt_search, .search__close').click(function () {
-	$('body, html').animate({
-		scrollTop: 0
-	}, 300);
+let html        = document.querySelector('html')
+let searchBtn   = document.querySelectorAll('.js-search-toggle')
 
-	$('html').toggleClass('search__active');
-
-	$('.search__input').focus();
-});
+searchBtn.forEach((button) => {
+	button.addEventListener('click', () => {
+		html.classList.toggle('search__active')
+	})
+})
