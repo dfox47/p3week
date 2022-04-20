@@ -16,8 +16,3 @@ $('.event_link_open').click(function() {
 $('.menu_slider__close').click(function() {
 	$('html').toggleClass('menu_top__active')
 })
-
-// when menu opened and user leaving menu
-$('.menu_slider').mouseleave(function() {
-	$('html').removeClass("menu_top__active")
-})
