@@ -74,26 +74,6 @@
 		}
 	}
 
-	&__fixed {
-		&.menu_top__fixed__show {
-			.menu_top {
-				top: 0;
-			}
-		}
-
-		.menu_top {
-			left: 0;
-			position: fixed;
-			top: -1000px;
-			transition: $transition;
-			z-index: 14;
-
-			&__spacer {
-				display: block;
-			}
-		}
-	}
-
 	&__left {
 		display: block;
 		float: left;
@@ -202,12 +182,6 @@
 		display: flex;
 		float: right;
 		text-align: right;
-	}
-
-	&__spacer {
-		background-color: $c_menu_bg;
-		display: none;
-		height: 50px;
 	}
 
 	&__toggle {

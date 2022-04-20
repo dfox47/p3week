@@ -143,8 +143,6 @@ unset(
 	</div>
 </div>
 
-<div class="menu_top__spacer"></div>
-
 <div class="menu_top">
 	<div class="wrap">
 		<div class="menu_top__wrap">
