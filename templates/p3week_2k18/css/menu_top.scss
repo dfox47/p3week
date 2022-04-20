@@ -2,9 +2,9 @@
 .menu_top {
 	background-color: $c_menu_bg;
 	font-size: 0;
-	position: relative;
+	position: absolute;
 	width: 100%;
-	z-index: 3;
+	z-index: 9;
 
 	&__1 {
 		padding: 70px 0;
