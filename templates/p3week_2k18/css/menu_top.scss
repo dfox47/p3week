@@ -267,33 +267,30 @@
 		}
 	}
 
+	&__toggle_wrap {
+		cursor: pointer;
+		display: inline-block;
+		outline: 0 none;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__wrap {
+		//align-items: center;
+		//display: flex;
+		//justify-content: space-between;
+		//width: 100%;
+	}
+
 	@media #{$mobile} {
 		.wrap {
 			padding: 0;
 		}
 	}
 }
-
-.menu_top__toggle_wrap,
-.menu_top__toggle_wrap:visited {
-	cursor: pointer;
-	display: inline-block;
-	outline: 0 none;
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-.menu_top__wrap {
-	//align-items: center;
-	//display: flex;
-	//justify-content: space-between;
-	//width: 100%;
-}
-
-
 
 .menu_top_sub {
 	align-items: center;
