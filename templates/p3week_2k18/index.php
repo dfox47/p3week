@@ -100,10 +100,7 @@ unset(
 	<div class="menu_slider__wrap">
 		<div class="menu_slider__close_wrap">
 			<div class="relative wrap">
-				<div class="menu_slider__close">
-					<span></span>
-					<span></span>
-				</div>
+				<div class="menu_slider__close"></div>
 			</div>
 		</div>
 
@@ -178,6 +175,8 @@ unset(
 				<div class="home_video_new__date">12-15 СЕНТЯБРЯ 2022 г.</div>
 
 				<div class="home_video_new__place">Цифровое Деловое Пространство,<br />г. Москва, ул. Покровка, 47</div>
+
+<!--				<script async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="4314" data-twf2s-event--id="1975311" data-timepad-widget-v2="event_register"></script>-->
 			</div>
 		</div>
 	</div>

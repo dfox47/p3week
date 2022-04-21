@@ -118,23 +118,24 @@
 		top: 0;
 		width: 100px;
 
-		span {
+		&::after,
+		&::before {
 			background-color: #fff;
 			bottom: 12px;
-			display: block;
+			content: "";
 			height: 4px;
 			position: absolute;
 			right: 30px;
 			transition: $transition;
 			width: 30px;
+		}
 
-			&:nth-child(1) {
-				transform: rotate(45deg);
-			}
+		&::after {
+			transform: rotate(45deg);
+		}
 
-			&:nth-child(2) {
-				transform: rotate(-45deg);
-			}
+		&::before {
+			transform: rotate(-45deg);
 		}
 	}
 
