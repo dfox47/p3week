@@ -16,15 +16,17 @@ let password            = config.password
 let port                = config.port
 let user                = config.user
 
-let remoteFolder        = '/www/p3week.ru/templates/p3week_2k18/'
-let remoteFolderCss     = remoteFolder + 'css/'
-let remoteFolderJs      = remoteFolder + 'js/'
-let remoteFolderLang    = '/www/p3week.ru/language/overrides/'
+let remoteFolder                = '/www/p3week.ru/templates/p3week_2k18/'
+let remoteFolderCss             = remoteFolder + 'css/'
+let remoteFolderJs              = remoteFolder + 'js/'
+let remoteFolderLang            = '/www/p3week.ru/language/overrides/'
+let remoteFolderTemplateParts   = remoteFolder + 'template-parts/'
 
-let localFolder         = 'templates/p3week_2k18/'
-let localFolderCss      = localFolder + 'css/'
-let localFolderJs       = localFolder + 'js/'
-let localFolderLang     = 'language/overrides/'
+let localFolder                 = 'templates/p3week_2k18/'
+let localFolderCss              = localFolder + 'css/'
+let localFolderJs               = localFolder + 'js/'
+let localFolderLang             = 'language/overrides/'
+let localFolderTemplateParts    = localFolder + 'template-parts/'
 
 
 
@@ -63,6 +65,11 @@ gulp.task('copy_html', function () {
 		.pipe(conn.dest(remoteFolder))
 })
 
+gulp.task('copy_template_parts', function () {
+	return gulp.src(localFolderTemplateParts + '**/*')
+		.pipe(conn.dest(remoteFolderTemplateParts))
+})
+
 gulp.task('copy_js', function () {
 	return gulp.src(localFolderJs + '**/*.js')
 		.pipe(conn.dest(remoteFolderJs))
@@ -89,10 +96,11 @@ gulp.task('js', function () {
 })
 
 gulp.task('watch', function() {
-	gulp.watch(localFolderCss + '**/*',         gulp.series('css', 'copy_css'))
-	gulp.watch(localFolder + '*.php',           gulp.series('copy_html'))
-	gulp.watch(localFolderLang + '*.ini',       gulp.series('lang'))
-	gulp.watch(localFolderJs + '**/*.js',       gulp.series('js', 'copy_js'))
+	gulp.watch(localFolderCss + '**/*',             gulp.series('css', 'copy_css'))
+	gulp.watch(localFolder + '*.php',               gulp.series('copy_html'))
+	gulp.watch(localFolderLang + '*.ini',           gulp.series('lang'))
+	gulp.watch(localFolderJs + '**/*.js',           gulp.series('js', 'copy_js'))
+	gulp.watch(localFolderTemplateParts + '**/*',   gulp.series('copy_template_parts'))
 })
 
 gulp.task('default', gulp.series(

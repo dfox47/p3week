@@ -9,9 +9,8 @@ $languageTag        = $lang->getTag();
 $languageCode       = $languages[ $lang->getTag() ]->sef;
 $languageName       = $lang->getName();
 
-
-$jinput = JFactory::getApplication()->input;
-$page_id = $jinput->get('id'); ?>
+$jinput             = JFactory::getApplication()->input;
+$page_id            = $jinput->get('id'); ?>
 
 <?php $this->setGenerator(null);
 
@@ -51,43 +50,6 @@ unset(
 
 	<script src="/templates/p3week_2k18/jquery.3.2.1.js"></script>
 
-	<script>
-		window.EVENTICIOUS_NETWORKING = function() {
-			function e() {
-				var e = i + "/" + n + "/" + r + "/" + o + "/redirect/safari";
-				window.open(e, "Logging in", "width=1,height=1,left=0,top=0"),
-					window.addEventListener("message", function(e) {
-						-1 !== e.origin.indexOf("eventicious.com") && t()
-					})
-			}
-			function t() {
-				var e = i + "/" + n + "/" + r + "/" + o + "/myoffice";
-				window.document.getElementById(a).src = e,
-					window.document.getElementById(a).style.display = "block"
-			}
-			var n = 0
-				, r = 5399
-				, o = void 0
-				, i = "https://networking-external.eventicious.com"
-				, a = "EVENTICIOUS_NETWORKING_IFRAME";
-			return {
-				init: function(e) {
-					if (!e || !e.eventId)
-						throw new Error("Parameter 'eventId' is required");
-					r = e.eventId,
-						o = e.locale || "";
-					var t = window.document.createElement("iframe");
-					t.id = a,
-						t.style.cssText = "border: 0; background: rgba(0,0,0,0.5); margin: 0 auto; display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%;",
-						window.document.body.appendChild(t)
-				},
-				open: function() {
-					false /*-1 !== navigator.userAgent.indexOf("Safari") && -1 === navigator.userAgent.indexOf("Chrome")*/ ? e() : t()
-				}
-			}
-		}()
-	</script>
-
 	<meta property="og:image" content="https://p3week.ru/images/logo2021.svg" />
 
 	<jdoc:include type="head" />
@@ -96,6 +58,7 @@ unset(
 
 
 <body class="lang_<?php echo $this->language; ?> no_js">
+
 <div class="menu_slider">
 	<div class="menu_slider__wrap">
 		<div class="menu_slider__close_wrap">
@@ -305,17 +268,7 @@ else { ?>
 <noscript><div><img src="https://mc.yandex.ru/watch/48054689" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-
-
-<div class="popup js-popup" data-popup="registration">
-	<div class="popup_close js-popup-close"></div>
-
-	<div class="popup__bg js-popup-close"></div>
-
-	<div class="popup__content">
-		<script async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="4314" data-twf2s-event--id="1975311" data-timepad-widget-v2="event_register"></script>
-	</div>
-</div>
+<?php include_once 'template-parts/popups.php';?>
 
 <?php // All scripts in one document with GULP ?>
 <script src="/templates/p3week_2k18/all.min.js?v<?php echo(date("Ymd")); ?>"></script>
