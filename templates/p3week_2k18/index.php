@@ -59,52 +59,11 @@ unset(
 
 <body class="lang_<?php echo $this->language; ?> no_js">
 
-<div class="menu_slider">
-	<div class="menu_slider__wrap">
-		<div class="menu_slider__close_wrap">
-			<div class="relative wrap">
-				<div class="menu_slider__close"></div>
-			</div>
-		</div>
-
-		<div class="wrap">
-			<div class="relative">
-				<?php if($this->countModules('menu_top')) { ?>
-					<jdoc:include type="modules" name="menu_top" style="none" />
-				<?php } ?>
-
-				<div class="menu_slider__wrap2">
-					<?php if($this->countModules('menu_top__1')) { ?>
-						<div class="menu_top__1">
-							<jdoc:include type="modules" name="menu_top__1" style="none" />
-						</div>
-					<?php } ?>
-
-					<?php if($this->countModules('menu_top__2')) { ?>
-						<div class="menu_top__2">
-							<jdoc:include type="modules" name="menu_top__2" style="none" />
-						</div>
-					<?php } ?>
-
-					<?php if($this->countModules('menu_top__3')) { ?>
-						<div class="menu_top__3">
-							<jdoc:include type="modules" name="menu_top__3" style="none" />
-						</div>
-					<?php } ?>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="menu_slider__line_bottom">
-		<div class="wrap">
-			<span></span>
-		</div>
-	</div>
-</div>
+<?php // menu slider
+include_once 'template-parts/menu_slider.php'; ?>
 
 <?php // menu top
-include_once 'template-parts/menu_top.php';?>
+include_once 'template-parts/menu_top.php'; ?>
 
 <?php if (!isset($_SERVER['REQUEST_URI']) || ltrim($_SERVER['REQUEST_URI'],'/') === '') { ?>
 	<div class="home_video_new">
@@ -246,7 +205,7 @@ else { ?>
 <!-- /Yandex.Metrika counter -->
 
 <?php // popups
-include_once 'template-parts/popups.php';?>
+include_once 'template-parts/popups.php'; ?>
 
 <?php // All scripts in one document with GULP ?>
 <script src="/templates/p3week_2k18/all.min.js?v<?php echo(date("Ymd")); ?>"></script>
