@@ -1,0 +1,120 @@
+
+.submenu {
+	background-color: $c_submenu_bg;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 16px;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0 auto;
+	padding: 30px 15px;
+	position: relative;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: 7;
+
+	&::after,
+	&::before {
+		background-color: $c_submenu_bg;
+		content: "";
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 1000px;
+	}
+
+	&::after {
+		left: 100%;
+	}
+
+	&::before {
+		right: 100%;
+	}
+
+	a,
+	a:visited {
+		cursor: pointer;
+		position: relative;
+		transition: $transition;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	// level 1
+	> li {
+		position: relative;
+
+		> a,
+		> a:visited {
+			color: #000;
+			display: block;
+			padding: .5em 1em;
+			position: relative;
+
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				transition: $transition;
+				width: 0;
+			}
+
+			&::after {
+				background-color: $c_bg__footer;
+				height: 100%;
+				top: 0;
+				z-index: -1;
+			}
+
+			&::before {
+				background-color: $c_main;
+				height: 2px;
+				top: 100%;
+			}
+
+			&:hover {
+				color: $c_main;
+				text-decoration: none;
+
+				&::after,
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+
+		&:hover {
+			> ul {
+				display: block;
+			}
+		}
+
+		// level 2
+		> ul {
+			background-color: $c_bg__footer;
+			display: none;
+			left: 0;
+			position: absolute;
+			top: 100%;
+			z-index: 3;
+
+			> li {
+				> a,
+				> a:visited {
+					color: #000;
+					display: block;
+					padding: .5em 1em;
+
+					&:hover {
+						color: $c_main;
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$tablet} {
+		justify-content: center;
+	}
+}

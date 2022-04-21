@@ -1,7 +1,18 @@
 
-let popupClose  = document.querySelectorAll('.js-popup-close')
-let popupShow   = document.querySelectorAll('.js-popup-show')
-let popupList   = document.querySelectorAll('.js-popup')
+let popupClose      = document.querySelectorAll('.js-popup-close')
+let popupShow       = document.querySelectorAll('.js-popup-show')
+let popupList       = document.querySelectorAll('.js-popup')
+let popupShowReg    = document.querySelectorAll('.js-popup-show-reg')
+
+popupClose.forEach((button) => {
+	button.addEventListener('click', (e) => {
+		e.preventDefault()
+
+		popupList.forEach((popup) => {
+			popup.classList.remove('active')
+		})
+	})
+})
 
 popupShow.forEach((button) => {
 	button.addEventListener('click', (e) => {
@@ -23,12 +34,10 @@ popupShow.forEach((button) => {
 	})
 })
 
-popupClose.forEach((button) => {
+popupShowReg.forEach((button) => {
 	button.addEventListener('click', (e) => {
 		e.preventDefault()
 
-		popupList.forEach((popup) => {
-			popup.classList.remove('active')
-		})
+		document.querySelector('.js-popup[data-popup="registration"]').classList.add('active')
 	})
 })
