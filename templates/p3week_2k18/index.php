@@ -176,7 +176,7 @@ unset(
 
 				<div class="home_video_new__place">Цифровое Деловое Пространство,<br />г. Москва, ул. Покровка, 47</div>
 
-<!--				<script async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="4314" data-twf2s-event--id="1975311" data-timepad-widget-v2="event_register"></script>-->
+				<button class="btn btn_submit js-popup-show" data-popup="registration">Регистрация</button>
 			</div>
 		</div>
 	</div>
@@ -196,6 +196,8 @@ else if ( $_SERVER['REQUEST_URI'] === '/en/') { ?>
 				<div class="home_video_new__date">12-15 SEPTEMBER 2022</div>
 
 				<div class="home_video_new__place">SAP Digital Business Space,<br />Moscow, Pokrovka 47</div>
+
+				<button class="btn btn_submit js-popup-show" data-popup="registration">Registration</button>
 			</div>
 		</div>
 	</div>
@@ -305,26 +307,17 @@ else { ?>
 
 
 
-<script>
-	EVENTICIOUS_NETWORKING.init({
-		eventId: 5399,//id конференции
-		locale: "ru"//локаль
-	})
-</script>
+<div class="popup js-popup" data-popup="registration">
+	<div class="popup_close js-popup-close"></div>
 
-<div class="popup_covid js-popup-covid">
-	<div class="popup_covid__bg js-popup-covid-close"></div>
+	<div class="popup__bg js-popup-close"></div>
 
-	<div class="popup_covid__content">
-		<div class="popup_covid__img_wrap">
-			<div class="popup_covid__close js-popup-covid-close"></div>
-
-			<img src="/images/covid.jpg" alt="" />
-		</div>
+	<div class="popup__content">
+		<script async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="4314" data-twf2s-event--id="1975311" data-timepad-widget-v2="event_register"></script>
 	</div>
 </div>
 
-<!-- all scripts in one document -->
+<?php // All scripts in one document with GULP ?>
 <script src="/templates/p3week_2k18/all.min.js?v<?php echo(date("Ymd")); ?>"></script>
 
 </body>

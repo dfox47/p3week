@@ -1,6 +1,4 @@
 
-
-
 .btn,
 .btn:visited {
 	cursor: pointer;
@@ -24,8 +22,6 @@
 		display: inline-block;
 	}
 }
-
-
 
 .btn_close,
 .btn_close:visited {
@@ -54,8 +50,6 @@
 		}
 	}
 }
-
-
 
 .btn_download,
 .btn_download:visited {
@@ -94,8 +88,6 @@
 	}
 }
 
-
-
 .btn_download_2,
 .btn_download_2:visited {
 	background-color: #404040;
@@ -130,7 +122,41 @@
 	}
 }
 
+.bt_search,
+.bt_search:visited {
+	display: inline-block;
+	height: 30px;
+	margin: 0 10px;
+	vertical-align: middle;
 
+	img,
+	svg {
+		display: inline-block;
+		height: 100%;
+	}
+
+	@media only screen and (max-width: 800px) {
+		height: 25px;
+	}
+}
+
+.btn_submit {
+	background-color: $c_main;
+	border: 1px solid rgba($c_main, .9);
+	border-radius: 6px;
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: .05em;
+	margin: 1em 0 0;
+	min-width: 300px;
+	padding: 16px;
+
+	&:hover {
+		background-color: #fff;
+		color: $c_main;
+		text-decoration: none;
+	}
+}
 
 .btn__home_download,
 .btn__home_download:visited {
@@ -157,8 +183,6 @@
 	}
 }
 
-
-
 .btn__play,
 .btn__play:visited {
 	display: block;
@@ -169,8 +193,6 @@
 		width: 50px;
 	}
 }
-
-
 
 .btn__main,
 .btn__main:visited {
@@ -192,8 +214,6 @@
 			width: 100%;
 	}
 }
-
-
 
 .btn__menu_download,
 .btn__menu_download:visited {
@@ -217,8 +237,6 @@
 		}
 	}
 }
-
-
 
 .btn__register,
 .btn__register:visited {
@@ -244,25 +262,3 @@
 		}
 	}
 }
-
-
-
-.bt_search,
-.bt_search:visited {
-	display: inline-block;
-	height: 30px;
-	margin: 0 10px;
-	vertical-align: middle;
-
-	img,
-	svg {
-		display: inline-block;
-		height: 100%;
-	}
-
-	@media only screen and (max-width: 800px) {
-			height: 25px;
-	}
-}
-
-
