@@ -1,4 +1,3 @@
-
 <div class="wrap">
 	<button class="reg_btn js-reg-create-bill" onclick="generatePDF()">сформировать счет</button>
 
@@ -94,7 +93,7 @@
 		<div class="reg_step js-reg-step" data-step="2">
 			<h2>Персональные данные</h2>
 
-			<label class="reg_form__label">
+		<!--	<label class="reg_form__label">
 				<span class="reg_form__title">Фамилия</span>
 				<input type="text" name="reg_name2" />
 			</label>
@@ -194,8 +193,97 @@
 				<button class="reg_btn js-reg-step-show" data-step="1">Назад</button>
 				<button class="reg_btn js-reg-create-bill" onclick="generatePDF()">сформировать счет</button>
 			</div>
-		</div>
-
+		</div>-->
+	</form>		
+	
+	<form action="export_to_pdf.php" method="get">
+			<label class="reg_form__label">
+				<span class="reg_form__title">Фамилия</span>
+				<input type="text" name="fio"/>
+			</label>
+		
+			<label class="reg_form__label">
+				<span class="reg_form__title">Имя</span>
+				<input type="text" name="name"/>
+			</label>
+		
+			<label class="reg_form__label">
+				<span class="reg_form__title">Отчество</span>
+				<input type="text" name="otchestvo"/>
+			</label>
+		
+			<label class="reg_form__label">
+				<span class="reg_form__title">серия/номер паспорта</span>
+				<input type="text" name="pasport"/>
+			</label>
+		
+			<label class="reg_form__label">
+				<span class="reg_form__title">телефон</span>
+				<input type="text" name="tel"/>
+			</label>
+		
+			<label class="reg_form__label">
+				<span class="reg_form__title">почта</span>
+				<input type="text" name="mail"/>
+			</label>
+		
+			<label class="reg_form__label">
+				<span class="reg_form__title">должность</span>
+				<input type="text" name="post"/>
+			</label>
+		
+			<div class="reg_special_block js-reg-show-at-category" data-category="standard business premium vip budget_org">
+				<h2>Реквизиты</h2>
+		
+			<label class="reg_form__label">
+					<span class="reg_form__title">Наименование организации</span>
+					<input type="text" name="name_org"/>
+			</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">Адрес организации</span>
+					<input type="text" name="address_org"/>
+				</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">ИНН</span>
+					<input type="text" name="inn"/>
+				</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">КПП</span>
+					<input type="text" name="kpp"/>
+				</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">ОГРН</span>
+					<input type="text" name="ogrn"/>
+				</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">р/с</span>
+					<input type="text" name="rs"/>
+				</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">Наименование банка</span>
+					<input type="text" name="name_bank"/>
+				</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">БИК</span>
+					<input type="text" name="bik"/>
+				</label>
+		
+				<label class="reg_form__label">
+					<span class="reg_form__title">к/с</span>
+					<input type="text" name="ks"/>
+				</label>
+			</div>
+			<button class="reg_btn js-reg-create-bill" onclick="generatePDF()" style="display: block; margin-left: auto; margin-right: auto;">
+			сформировать счет</button>
+		</div>	
+		
 		<div class="reg_total">
 			<div class="reg_total__title">Стоимость</div>
 			<div class="reg_total__price">
@@ -203,7 +291,7 @@
 			</div>
 		</div>
 	</form>
-
+	
 	<div class="popup js-popup">
 		<div class="popup__content">
 			<div class="popup_close js-popup-close"></div>
