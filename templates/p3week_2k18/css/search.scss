@@ -129,8 +129,11 @@
 		background-color: $c_search__bg;
 		display: none;
 		font-size: 0;
+		left: 0;
 		padding: 10px 0;
-		position: relative;
+		position: absolute;
+		top: 0;
+		width: 100%;
 		z-index: 5;
 
 		form {

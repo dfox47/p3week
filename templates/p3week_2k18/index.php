@@ -103,25 +103,8 @@ unset(
 	</div>
 </div>
 
-<div class="menu_top">
-	<div class="wrap">
-		<div class="menu_top__wrap">
-			<?php if($this->countModules('menu_top__left')) { ?>
-				<div class="menu_top__left">
-					<jdoc:include type="modules" name="menu_top__left" style="none" />
-				</div>
-			<?php } ?>
-
-			<?php if($this->countModules('menu_top__right')) { ?>
-				<div class="menu_top__right">
-					<jdoc:include type="modules" name="menu_top__right" style="none" />
-				</div>
-			<?php } ?>
-
-			<div class="clear"></div>
-		</div>
-	</div>
-</div>
+<?php // menu top
+include_once 'template-parts/menu_top.php';?>
 
 <?php if (!isset($_SERVER['REQUEST_URI']) || ltrim($_SERVER['REQUEST_URI'],'/') === '') { ?>
 	<div class="home_video_new">
@@ -175,13 +158,7 @@ else { ?>
 	<?php } ?>
 <?php } ?>
 
-<?php if($this->countModules('search')) { ?>
-	<div class="search__wrap">
-		<div class="wrap">
-			<jdoc:include type="modules" name="search" style="none" />
-		</div>
-	</div>
-<?php } ?>
+
 
 <?php if ($this->countModules('p3transport__link')) { ?>
 	<jdoc:include type="modules" name="p3transport__link" style="none" />
@@ -223,11 +200,11 @@ else { ?>
 	<?php include_once 'registration.php'; ?>
 <?php } ?>
 
-<?php if($this->countModules('after_content')) { ?>
+<?php if ($this->countModules('after_content')) { ?>
 	<jdoc:include type="modules" name="after_content" style="none" />
 <?php } ?>
 
-<?php if($this->countModules('footer')) { ?>
+<?php if ($this->countModules('footer')) { ?>
 	<div class="footer">
 		<div class="wrap">
 			<jdoc:include type="modules" name="footer" style="none" />
@@ -268,7 +245,8 @@ else { ?>
 <noscript><div><img src="https://mc.yandex.ru/watch/48054689" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-<?php include_once 'template-parts/popups.php';?>
+<?php // popups
+include_once 'template-parts/popups.php';?>
 
 <?php // All scripts in one document with GULP ?>
 <script src="/templates/p3week_2k18/all.min.js?v<?php echo(date("Ymd")); ?>"></script>
