@@ -1,9 +1,9 @@
-<?php header('Content-Type: text/html;charset=utf-8'); ?>
+<?php header('Content-Type: text/html;charset=utf-8');
 
-<?php defined ('_JEXEC') or die ('resticted aceess');
-$doc = JFactory::getDocument(); ?>
+defined ('_JEXEC') or die ('resticted aceess');
+$doc = JFactory::getDocument();
 
-<?php $lang         = JFactory::getLanguage();
+$lang               = JFactory::getLanguage();
 $languages          = JLanguageHelper::getLanguages('lang_code');
 $languageTag        = $lang->getTag();
 $languageCode       = $languages[ $lang->getTag() ]->sef;
@@ -25,22 +25,7 @@ unset($this->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']); ?>
 
 	<meta content="width=device-width, user-scalable=yes, maximum-scale=5" name="viewport" />
 
-	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-
-	<link rel="icon" type="image/png" href="/images/favicon/16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="/images/favicon/32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="/images/favicon/96.png" sizes="96x96" />
-
-	<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/180.png" />
+	<?php include "template-parts/favicon.php"; ?>
 
 	<link rel="stylesheet" href="/templates/p3week_2k18/styles.min.css?v<?php echo(date("YmdHis")); ?>" />
 
