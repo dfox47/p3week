@@ -34,7 +34,7 @@ else if ( $_SERVER['REQUEST_URI'] === '/en/') { ?>
 			<div class="home_video_new__info">
 				<div class="home_video_new__date">12-15 SEPTEMBER 2022</div>
 
-				<div class="home_video_new__place">SAP Digital Business Space,<br />Moscow, Pokrovka 47</div>
+				<div class="home_video_new__place">Digital Business Space,<br />Moscow, Pokrovka 47</div>
 
 				<button class="btn btn_submit js-popup-show" data-popup="registration">Registration</button>
 			</div>
