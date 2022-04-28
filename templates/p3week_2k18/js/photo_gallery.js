@@ -58,14 +58,20 @@ else if ( $('.gal_menu_days__2020').length ) {
 	day_3 = 30
 	day_4 = 1
 }
+else if ( $('.gal_menu_days__2021').length ) {
+	day_1 = 28
+	day_2 = 29
+	day_3 = 30
+	day_4 = 1
+}
 
 
 
 $galMenuDays.find('a').click(function () {
-	var data_day = $(this).attr('data-day')
+	let data_day = $(this).attr('data-day')
 
-	var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?day=' + data_day
-	window.history.pushState({ path: newurl }, '', newurl)
+	let newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?day=' + data_day
+	window.history.pushState({ path: newUrl }, '', newUrl)
 
 	if ( data_day === 1 ) {
 		selected_day = day_1
@@ -94,10 +100,7 @@ $galMenuDays.find('a').click(function () {
 		})
 	}
 
-
-
-	$galMenuDays.find('li').removeClass('active')
-	$galMenuDays.find('li').find('a[data-day="' + data_day + '"]').parent().addClass('active')
+	$galMenuDays.find('li').removeClass('active').find('a[data-day="' + data_day + '"]').parent().addClass('active')
 })
 
 
@@ -109,7 +112,7 @@ $blogPhoto.find('.blog__items_wrap').find('> div').find('> div').each(function (
 
 
 
-function current_day_on_load() {
+function currentDayOnLoad() {
 	// получаем значение параметра из URL
 	let getUrlParameter = function getUrlParameter(sParam) {
 		let sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -171,4 +174,4 @@ function current_day_on_load() {
 	}
 }
 
-current_day_on_load()
+currentDayOnLoad()
