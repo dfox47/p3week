@@ -8,8 +8,6 @@
 @import "defaults";
 @import "var";
 
-
-
 @import "arh";
 @import "block_home";
 @import "breadcrumbs";
@@ -29,6 +27,7 @@
 @import "p_org";
 @import "p_video";
 @import "partners";
+@import "popup";
 @import "popup_rosinfra";
 @import "post_release";
 @import "presentation";
@@ -40,8 +39,6 @@
 @import "table_participants";
 @import "table_programm";
 @import "welcome";
-
-
 
 // must be the last
 @import "custom";
