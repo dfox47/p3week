@@ -5,11 +5,11 @@ let day_1 = 28
 let day_2 = 29
 let day_3 = 30
 let day_4 = 31
-let day_all
+let dayAll
 let selected_day
-let $galMenuDays = $('.gal_menu_days')
 
-let $blogPhoto = $('.blog__photo')
+let $galMenuDays    = $('.gal_menu_days')
+let $blogPhoto      = $('.blog__photo')
 
 $blogPhoto.find('.gal_item__img').click(function () {
 	window.location.href = $(this).parent().find('.readmore').find('a').attr('href')
@@ -68,28 +68,28 @@ else if ( $('.gal_menu_days__2021').length ) {
 
 
 $galMenuDays.find('a').click(function () {
-	let data_day = $(this).attr('data-day')
+	let dataDay = $(this).attr('data-day')
 
-	let newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?day=' + data_day
+	let newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?day=' + dataDay
 	window.history.pushState({ path: newUrl }, '', newUrl)
 
-	if ( data_day === 1 ) {
+	if ( dataDay === '1' ) {
 		selected_day = day_1
 	}
-	else if ( data_day === 2 ) {
+	else if ( dataDay === '2' ) {
 		selected_day = day_2
 	}
-	else if ( data_day === 3 ) {
+	else if ( dataDay === '3' ) {
 		selected_day = day_3
 	}
-	else if ( data_day === 4 ) {
+	else if ( dataDay === '4' ) {
 		selected_day = day_4
 	}
-	else if ( data_day === 'all' ) {
-		selected_day = day_all
+	else if ( dataDay === 'all' ) {
+		selected_day = dayAll
 	}
 
-	if ( selected_day === day_all ) {
+	if ( selected_day === dayAll ) {
 		$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').addClass('active')
 	}
 	else {
@@ -100,7 +100,7 @@ $galMenuDays.find('a').click(function () {
 		})
 	}
 
-	$galMenuDays.find('li').removeClass('active').find('a[data-day="' + data_day + '"]').parent().addClass('active')
+	$galMenuDays.find('li').removeClass('active').find('a[data-day="' + dataDay + '"]').parent().addClass('active')
 })
 
 
@@ -143,23 +143,23 @@ function currentDayOnLoad() {
 
 
 
-		if ( day === 1 ) {
+		if ( day === '1' ) {
 			selected_day = day_1
 		}
-		else if ( day === 2 ) {
+		else if ( day === '2' ) {
 			selected_day = day_2
 		}
-		else if ( day === 3 ) {
+		else if ( day === '3' ) {
 			selected_day = day_3
 		}
-		else if ( day === 4 ) {
+		else if ( day === '4' ) {
 			selected_day = day_4
 		}
 		else if ( day === 'all' ) {
-			selected_day = day_all
+			selected_day = dayAll
 		}
 
-		if ( selected_day === day_all ) {
+		if ( selected_day === dayAll ) {
 			$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').addClass('active')
 		}
 		else {
