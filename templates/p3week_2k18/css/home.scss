@@ -4,6 +4,32 @@
 	text-align: justify;
 }
 
+.home_links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__img {}
+
+	&__item {
+		width: 48%;
+	}
+
+	&__link {
+		color: $c_main;
+		display: block;
+		font-size: 20px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: $transition;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+
 .home_slider {
 	.owl-item {
 		opacity: 0;
