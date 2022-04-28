@@ -10,6 +10,7 @@ let selected_day
 
 let $galMenuDays    = $('.gal_menu_days')
 let $blogPhoto      = $('.blog__photo')
+let $blogPhotoDiv   = $blogPhoto.find('.blog__items_wrap').find('> div').find('> div')
 
 $blogPhoto.find('.gal_item__img').click(function () {
 	window.location.href = $(this).parent().find('.readmore').find('a').attr('href')
@@ -90,12 +91,12 @@ $galMenuDays.find('a').click(function () {
 	}
 
 	if ( selected_day === dayAll ) {
-		$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').addClass('active')
+		$blogPhotoDiv.addClass('active')
 	}
 	else {
-		$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').removeClass('active')
+		$blogPhotoDiv.removeClass('active')
 
-		$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').each(function () {
+		$blogPhotoDiv.each(function () {
 			$(this).find('.gal_item__date').find('span:contains("' + selected_day + '")').parent().parent().addClass('active')
 		})
 	}
@@ -106,7 +107,7 @@ $galMenuDays.find('a').click(function () {
 
 
 // show only gallery of first day at page load
-$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').each(function () {
+$blogPhotoDiv.each(function () {
 	$(this).find('.gal_item__date').find('span:contains("' + day_1 + '")').parent().parent().addClass('active')
 })
 
@@ -160,12 +161,12 @@ function currentDayOnLoad() {
 		}
 
 		if ( selected_day === dayAll ) {
-			$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').addClass('active')
+			$blogPhotoDiv.addClass('active')
 		}
 		else {
-			$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').removeClass('active')
+			$blogPhotoDiv.removeClass('active')
 
-			$blogPhoto.find('.blog__items_wrap').find('> div').find('> div').each(function () {
+			$blogPhotoDiv.each(function () {
 				$(this).find('.gal_item__date').find('span:contains("' + selected_day + '")').parent().parent().addClass('active')
 			})
 		}
