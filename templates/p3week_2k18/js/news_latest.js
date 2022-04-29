@@ -11,6 +11,7 @@ $newsItems.forEach((item) => {
 		if (this.readyState === 4 && this.status === 200) {
 			$response.innerHTML = this.responseText
 			$newsImg.style.backgroundImage = "url(" + $response.querySelector('.item-page__news img').currentSrc + ")"
+			$response.remove()
 		}
 	}
 	xhttp.open('GET', newsLink, true)
