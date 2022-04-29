@@ -825,9 +825,16 @@ ul {
 .news_latest {
 	display: flex;
 	flex-wrap: wrap;
+	font-size: 12px;
 	justify-content: space-between;
 	margin: 0 auto;
 	padding: 50px 0;
+
+	&__date {
+		display: block;
+		font-weight: 700;
+		margin: .5em 0;
+	}
 
 	&__item {
 		width: 22%;

@@ -13,6 +13,7 @@ defined('_JEXEC') or die; ?>
 	<?php if ($item->link !== '' && $params->get('link_titles')) : ?>
 		<a class="news_latest__link js-news-latest-link" href="<?php echo $item->link; ?>">
 			<span class="news_latest__img js-news-latest-img"></span>
+			<span class="news_latest__date"><?php echo JHTML::_('date', $item->publish_up, JText::_('DATE_FORMAT_LC3')); ?></span>
 			<span class="news_latest__title"><?php echo $item->title; ?></span>
 			<span class="hidden js-news-latest-response"></span>
 		</a>
