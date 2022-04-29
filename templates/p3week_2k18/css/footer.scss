@@ -183,3 +183,30 @@
 		}
 	}
 }
+
+.footer_social {
+	align-items: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 30px 0 0;
+
+	&__item {
+		display: block;
+	}
+
+	&__img {
+		max-width: 32px;
+		width: 100%;
+	}
+
+	&__link {
+		display: block;
+		margin: 0 5px 10px;
+		text-decoration: none;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
