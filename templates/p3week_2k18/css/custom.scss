@@ -822,45 +822,6 @@ ul {
 	display: none;
 }
 
-.news_latest {
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 12px;
-	justify-content: space-between;
-	margin: 0 auto;
-	padding: 50px 0;
-
-	&__date {
-		display: block;
-		font-weight: 700;
-		margin: .5em 0;
-	}
-
-	&__item {
-		width: 22%;
-	}
-
-	&__img {
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		display: block;
-		height: 120px;
-		margin: 0 0 10px;
-		width: 100%;
-	}
-
-	&__link {
-		color: $c_menu_bg;
-		text-decoration: none;
-		transition: $transition;
-
-		&:hover {
-			opacity: .7;
-		}
-	}
-}
-
 .p_conditions {
 	h1 {
 		float: left;
