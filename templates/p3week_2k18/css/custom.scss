@@ -822,6 +822,19 @@ ul {
 	display: none;
 }
 
+.news_latest {
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__item {
+		width: 22%;
+	}
+
+	&__link {}
+}
+
 .p_conditions {
 	h1 {
 		float: left;
