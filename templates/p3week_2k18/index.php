@@ -27,7 +27,7 @@ unset($this->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']); ?>
 
 	<?php include "template-parts/favicon.php"; ?>
 
-	<link rel="stylesheet" href="/templates/p3week_2k18/styles.min.css?v<?php echo(date("Ymd")); ?>" />
+	<link rel="stylesheet" href="/templates/p3week_2k18/styles.min.css?v<?php echo(date("YmdHis")); ?>" />
 
 	<script src="/templates/p3week_2k18/jquery.3.2.1.js"></script>
 
