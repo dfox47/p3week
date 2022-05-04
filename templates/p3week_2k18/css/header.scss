@@ -20,9 +20,11 @@
 	}
 
 	&__right {
+		align-items: flex-end;
+		display: flex;
+		max-width: 420px;
 		position: relative;
 		text-align: right;
-		max-width: 420px;
 
 		@media #{$tablet} {
 			max-width: none;
@@ -78,7 +80,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		max-height: 214px;
 	}
 
 	.logo {
@@ -231,6 +232,7 @@
 		width: 270px;
 
 		img {
+			height: 55px;
 			width: 270px;
 		}
 
@@ -296,7 +298,8 @@
 		width: 120px;
 
 		img {
-			max-width: 60px;
+			height: 47px;
+			width: 60px;
 		}
 	}
 
