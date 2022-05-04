@@ -1,12 +1,16 @@
 
 // Standart class [START]
+a {
+	&.btn {
+		color: $c_main;
+	}
+}
+
 article {
 	font-size: 19px;
 
 	a,
 	a:visited {
-		color: $c_main;
-		display: inline-block;
 		text-decoration: none;
 
 		&.block_home__link {
@@ -16,10 +20,6 @@ article {
 			&:hover {
 				text-decoration: none;
 			}
-		}
-
-		&:hover {
-			text-decoration: underline;
 		}
 	}
 
