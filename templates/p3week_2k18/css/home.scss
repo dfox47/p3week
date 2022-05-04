@@ -7,25 +7,48 @@
 .home_links {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-
-	&__img {}
+	justify-content: center;
 
 	&__item {
-		width: 48%;
+		max-width: 250px;
+		padding: 15px;
+		width: 100%;
 	}
 
 	&__link {
-		color: $c_main;
+		background-color: $c_main;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: #fff;
 		display: block;
-		font-size: 20px;
+		font-size: 30px;
+		margin: 15px;
+		max-width: 250px;
+		position: relative;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: $transition;
+		width: 100%;
+
+		&::after {
+			content: "";
+			display: block;
+			padding: 100% 0 0;
+			position: relative;
+			width: 100%;
+		}
 
 		&:hover {
 			opacity: .7;
+		}
+
+		span {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%,-50%);
 		}
 	}
 }
