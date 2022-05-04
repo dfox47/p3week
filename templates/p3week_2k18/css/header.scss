@@ -7,17 +7,6 @@
 	position: relative;
 	z-index: 3;
 
-	&__divider {
-		background-color: #000;
-		display: none;
-		height: 140px;
-		width: 1px;
-
-		@media #{$tablet} {
-			display: none;
-		}
-	}
-
 	&__left {
 		align-items: flex-end;
 		display: flex;
@@ -89,9 +78,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		max-height: 214px;
 	}
-
-
 
 	.logo {
 		.credits__logo__white {
