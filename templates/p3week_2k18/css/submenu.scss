@@ -118,6 +118,10 @@
 	@media #{$tablet} {
 		justify-content: center;
 	}
+
+	@media #{$mobile} {
+		display: none;
+	}
 }
 
 .submenu_fixed {
