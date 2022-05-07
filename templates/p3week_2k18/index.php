@@ -58,8 +58,10 @@ include_once 'template-parts/home_video.php'; ?>
 <?php } ?>
 
 <?php if ($this->countModules('breadcrumbs')) { ?>
-	<div class="wrap">
-		<jdoc:include type="modules" name="breadcrumbs" style="none" />
+	<div class="submenu_wrap">
+		<div class="wrap">
+			<jdoc:include type="modules" name="breadcrumbs" style="none" />
+		</div>
 	</div>
 <?php } ?>
 

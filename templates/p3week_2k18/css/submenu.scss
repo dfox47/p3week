@@ -116,23 +116,19 @@
 	}
 
 	@media #{$tablet} {
-		justify-content: center;
-	}
-
-	@media #{$mobile} {
 		display: none;
 	}
 }
 
 .submenu_fixed {
-	.header {
-		margin: 0 0 82px;
-	}
-
 	.submenu {
 		left: 50%;
 		position: fixed;
 		top: 0;
 		transform: translateX(-50%);
 	}
+}
+
+.submenu_wrap {
+	min-height: 82px;
 }
