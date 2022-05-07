@@ -37,6 +37,15 @@
 		}
 	}
 
+	&__video {
+		display: inline-block;
+		float: left;
+		height: 200px;
+		margin: 0 30px 30px 0;
+		max-width: 350px;
+		width: 100%;
+	}
+
 	&__wrap {
 		margin: 0 auto;
 		max-width: 1000px;
