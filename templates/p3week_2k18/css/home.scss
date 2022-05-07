@@ -58,7 +58,7 @@
 			transform: translate(-50%,-50%);
 		}
 
-		@media #{$mobile} {
+		@media #{$mobile_s} {
 			font-size: 20px;
 		}
 	}
