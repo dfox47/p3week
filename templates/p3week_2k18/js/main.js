@@ -1,12 +1,6 @@
 
 var $ = jQuery.noConflict()
 
-$('.p_news__back').click(function () {
-	parent.history.back();
-
-	return false;
-})
-
 $('.table_programm__more').click(function () {
 	$(this).parent().toggleClass('active');
 
@@ -69,8 +63,8 @@ $(window).bind('load', function() {
 
 	$(window).resize(windowResize);
 
-	var covidClosed = localStorage.getItem('covidClosed');
-	var $popupCovid = $('.js-popup-covid');
+	let covidClosed = localStorage.getItem('covidClosed');
+	let $popupCovid = $('.js-popup-covid');
 
 	if ( covidClosed !== 'true' ) {
 		$popupCovid.addClass('active');
@@ -81,7 +75,7 @@ $(window).bind('load', function() {
 		localStorage.setItem('covidClosed', 'true');
 	});
 
-	var hash = window.location.hash;
+	let hash = window.location.hash;
 
 	if ( hash ) {
 		$(hash).find('.table_programm__desc').addClass('active');
