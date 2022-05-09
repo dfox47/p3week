@@ -90,7 +90,8 @@
 
 	@media #{$tablet} {
 		background: 0 none;
-		padding: 0;
+		max-height: none;
+		padding: 50px 0;
 
 		.wrap {
 			padding: 0;
@@ -147,53 +148,6 @@
 		height: auto;
 		transition: $transition;
 	}
-
-	.owl-carousel {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.owl-dot {
-		background-color: $c_header_bg;
-		border-radius: 50%;
-		display: inline-block;
-		height: 10px;
-		margin: 0 5px;
-		width: 10px;
-
-		&.active {
-			background-color: #000;
-		}
-	}
-
-	.owl-dots {
-		margin: 10px 0 0;
-		text-align: center;
-		width: 100%;
-	}
-
-	.owl-item {
-		padding: 0 10px;
-		text-align: center;
-
-		a,
-		a:visited {
-			margin: 0;
-		}
-
-		.header_title_1__hidden_on_desktop {
-			display: block;
-		}
-	}
-
-	.owl-stage {
-		align-items: center;
-		display: flex;
-	}
-
-
 
 	&__ac {
 		width: 180px;

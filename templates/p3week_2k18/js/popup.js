@@ -39,5 +39,6 @@ popupShowReg.forEach((button) => {
 		e.preventDefault()
 
 		document.querySelector('.js-popup[data-popup="registration"]').classList.add('active')
+		document.querySelector('html').classList.remove('menu_top__active')
 	})
 })
