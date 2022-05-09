@@ -78,7 +78,6 @@
 
 	&__left {
 		display: block;
-		float: left;
 	}
 
 	&__presentation_link {
@@ -182,7 +181,6 @@
 	&__right {
 		align-items: center;
 		display: flex;
-		float: right;
 		text-align: right;
 	}
 
@@ -245,20 +243,24 @@
 
 	&__toggle_wrap {
 		cursor: pointer;
-		display: inline-block;
+		display: none;
 		outline: 0 none;
 		text-decoration: none;
 
 		&:hover {
 			text-decoration: none;
 		}
+
+		@media #{$tablet} {
+			display: inline-block;
+		}
 	}
 
 	&__wrap {
-		//align-items: center;
-		//display: flex;
-		//justify-content: space-between;
-		//width: 100%;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 
 	@media #{$mobile} {

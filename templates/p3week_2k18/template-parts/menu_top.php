@@ -13,8 +13,6 @@
 					<jdoc:include type="modules" name="menu_top__right" style="none" />
 				</div>
 			<?php } ?>
-
-			<div class="clear"></div>
 		</div>
 	</div>
 
