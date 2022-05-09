@@ -1,6 +1,6 @@
 
 let submenu = () => {
-	let $submenu        = document.querySelector('.submenu')
+	let $submenu = document.querySelector('.submenu_wrap')
 
 	if (!$submenu) return
 
@@ -15,5 +15,9 @@ let submenu = () => {
 		submenuSticky()
 	}
 }
+
+window.addEventListener('resize', function() {
+	setTimeout(submenu, 1000);
+})
 
 submenu()
