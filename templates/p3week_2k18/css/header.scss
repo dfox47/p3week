@@ -106,14 +106,16 @@
 }
 
 .header_links {
-	a,
-	a:visited {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	a {
 		color: #000;
-		display: inline-block;
+		display: block;
 		font-size: 0;
 		margin: 0 10px 10px 0;
 		text-decoration: none;
-		vertical-align: middle;
 
 		&:hover {
 			svg,
@@ -258,8 +260,10 @@
 	}
 
 	@media #{$tablet} {
-		a,
-		a:visited {
+		justify-content: center;
+		width: 100%;
+
+		a {
 			span {
 				display: block;
 			}
@@ -267,22 +271,6 @@
 
 		&__ac {
 			width: 100%;
-		}
-	}
-
-	@media #{$mobile_s} {
-		.owl-item {
-			img,
-			svg {
-				max-width: 110px;
-			}
-
-			.header_links__rspp {
-				img,
-				svg {
-					max-width: 70px;
-				}
-			}
 		}
 	}
 }
