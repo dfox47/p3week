@@ -131,4 +131,8 @@
 
 .submenu_wrap {
 	min-height: 82px;
+
+	@media #{$tablet} {
+		display: none;
+	}
 }
