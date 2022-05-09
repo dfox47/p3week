@@ -1,10 +1,6 @@
 
 var $ = jQuery.noConflict()
 
-$('.bt_reg_click').click(function() {
-	$(".bt_reg").click();
-})
-
 $('.p_news__back').click(function () {
 	parent.history.back();
 
