@@ -1,5 +1,5 @@
 
-let goBack = document.querySelectorAll('.bt_back')
+let goBack = document.querySelectorAll('.js-go-back')
 
 goBack.forEach((btn) => {
 	btn.addEventListener('click', () => {
