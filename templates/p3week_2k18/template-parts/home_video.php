@@ -13,7 +13,7 @@
 			<div class="home_video_new__info">
 				<div class="home_video_new__date">12-15 СЕНТЯБРЯ 2022 г.</div>
 
-				<div class="home_video_new__place">Цифровое Деловое Пространство,<br />г. Москва, ул. Покровка, 47</div>
+				<a class="home_video_new__place" href="//2gis.ru/moscow/search/цдп/firm/4504127908669990/37.654323%2C55.763772?m=37.654453%2C55.76398%2F11" target="_blank">Цифровое Деловое Пространство,<br />г. Москва, ул. Покровка, 47</a>
 
 				<button class="btn btn_submit js-popup-show" data-popup="registration">Регистрация</button>
 			</div>
