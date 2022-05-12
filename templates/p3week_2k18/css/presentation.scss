@@ -51,6 +51,7 @@
 	&__place {
 		font-family: $font_proxima_light;
 		margin: 8px 0;
+		text-decoration: underline;
 	}
 
 	&__status {
@@ -75,7 +76,8 @@
 	}
 
 	&__title {
-		font-family: $font_proxima_light;
+		font-family: $font_proxima_bold;
+		font-size: 16px;
 	}
 
 	&__title_2 {

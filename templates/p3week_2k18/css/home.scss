@@ -186,6 +186,12 @@
 		}
 	}
 
+	&__info {
+		align-items: flex-end;
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__item {
 		height: 100%;
 		left: 0;
@@ -197,9 +203,20 @@
 	}
 
 	&__place {
+		background: url(/images/icons/map.svg) 0 5px no-repeat scroll transparent;
+		background-size: 25px;
 		color: #fff;
+		display: block;
 		font-family: $font_proxima_light;
 		font-size: 27px;
+		padding: 0 0 0 35px;
+		position: relative;
+		text-decoration: underline;
+
+		&:hover {
+			opacity: .7;
+			text-decoration: none;
+		}
 
 		@media #{$mobile_s} {
 			font-size: 15px;
