@@ -1,88 +1,86 @@
 
+.presentation {
+	&__day {
+		display: none;
 
+		&.active {
+			display: block;
+		}
 
-.presentation__day {
-	display: none;
+		> div {
+			padding: 50px 0;
+			position: relative;
 
-	&.active {
-		display: block;
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+
+		.bg_grey_light__table_time {
+			&::after {
+				background-color: $c_header_bg;
+				content: "";
+				display: block;
+				height: 100%;
+				left: 100%;
+				position: absolute;
+				top: 0;
+				width: 9999px;
+			}
+
+			&::before {
+				background-color: $c_header_bg;
+				content: "";
+				display: block;
+				height: 100%;
+				right: 100%;
+				position: absolute;
+				top: 0;
+				width: 9999px;
+			}
+		}
 	}
 
-	> div {
-		padding: 50px 0;
+	&__menu {}
+
+	&__name {
+		font-family: $font_proxima_semibold;
+		margin: 30px 0 10px;
+	}
+
+	&__place {
+		font-family: $font_proxima_light;
+		margin: 8px 0;
+	}
+
+	&__status {
+		font-family: $font_proxima_light;
+		margin: 10px 0;
+	}
+
+	&__time {
+		font-family: $font_proxima_light;
+		font-size: 20px;
 		position: relative;
 
-		&:first-child {
-			padding-top: 0;
-		}
-	}
-
-	.bg_grey_light__table_time {
 		&::after {
-			background-color: $c_header_bg;
+			background-color: #000;
 			content: "";
-			display: block;
-			height: 100%;
-			left: 100%;
-			position: absolute;
-			top: 0;
-			width: 9999px;
-		}
-
-		&::before {
-			background-color: $c_header_bg;
-			content: "";
-			display: block;
-			height: 100%;
-			right: 100%;
-			position: absolute;
-			top: 0;
-			width: 9999px;
+			display: inline-block;
+			height: 15px;
+			margin: 0 10px;
+			vertical-align: middle;
+			width: 1px;
 		}
 	}
-}
 
-.presentation__menu {}
+	&__title {
+		font-family: $font_proxima_light;
+	}
 
-.presentation__name {
-	font-family: $font_proxima_semibold;
-	margin: 30px 0 10px;
-}
-
-.presentation__place {
-	font-family: $font_proxima_light;
-	margin: 8px 0;
-}
-
-.presentation__status {
-	font-family: $font_proxima_light;
-	margin: 10px 0;
-}
-
-.presentation__time {
-	font-family: $font_proxima_light;
-	font-size: 20px;
-	position: relative;
-
-	&::after {
-		background-color: #000;
-		content: "";
-		display: inline-block;
-		height: 15px;
-		margin: 0 10px;
-		vertical-align: middle;
-		width: 1px;
+	&__title_2 {
+		color: $c_main;
+		font-family: $font_proxima_light;
+		margin: 10px 0;
 	}
 }
-
-.presentation__title {
-	font-family: $font_proxima_light;
-}
-
-.presentation__title_2 {
-	color: $c_main;
-	font-family: $font_proxima_light;
-	margin: 10px 0;
-}
-
-
