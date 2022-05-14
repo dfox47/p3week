@@ -4,7 +4,7 @@ let speakersLinks = document.querySelectorAll('.js-speakers-link')
 
 speakersLinks.forEach((item) => {
 	item.addEventListener('click', (link) => {
-		let letter = link.target.dataset.link
+		let letter = link.target.textContent.toLowerCase()
 
 		// remove class from all letters
 		speakersLinks.forEach((e) => {
@@ -15,7 +15,7 @@ speakersLinks.forEach((item) => {
 		link.target.classList.add('active')
 
 		// ALL selected
-		if ( letter === 'all' ) {
+		if ( letter === 'all' && letter === 'все' ) {
 			speakersItems.forEach((item) => {
 				item.classList.remove('hidden')
 			})
@@ -24,7 +24,9 @@ speakersLinks.forEach((item) => {
 		}
 
 		speakersItems.forEach((item) => {
-			if (item.dataset.name === letter) {
+			let firstLetter = item.querySelector('.speaker_name').textContent.charAt(0).toLowerCase()
+
+			if (firstLetter === letter) {
 				item.classList.remove('hidden')
 
 				return
