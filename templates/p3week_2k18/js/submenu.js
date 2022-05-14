@@ -4,11 +4,8 @@ let submenu = () => {
 
 	if (!$submenu) return
 
-	let submenuOffset   = $submenu.offsetTop
-	let $html           = document.querySelector('html')
-
 	let submenuSticky = () => {
-		$html.classList.toggle('submenu_fixed', window.pageYOffset > submenuOffset)
+		document.querySelector('html').classList.toggle('submenu_fixed', window.pageYOffset > $submenu.offsetTop)
 	}
 
 	window.onscroll = () => {
