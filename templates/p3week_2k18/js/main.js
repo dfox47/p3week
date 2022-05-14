@@ -40,22 +40,6 @@ $('.p_programm_close').click(function() {
 	}, 700);
 })
 
-$('.speakers_nav').find("> li").click(function() {
-	var name_link = $(this).attr("data-name-link");
-
-	$(".speakers_nav").find("> li").removeClass("active");
-	$(this).addClass("active");
-
-	if ( name_link === "all" ) {
-		$(".speakers").find("> div").removeClass("hidden");
-	}
-	else {
-		$(".speakers").find("> div").addClass("hidden");
-
-		$(".speakers").find("*[data-name='" + name_link + "']").removeClass("hidden");
-	}
-})
-
 $(window).bind('load', function() {
 	$('body').removeClass('no_js');
 
