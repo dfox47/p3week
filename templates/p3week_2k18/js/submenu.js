@@ -14,7 +14,7 @@ let submenu = () => {
 }
 
 window.addEventListener('resize', function() {
-	setTimeout(submenu, 1000);
+	submenu()
 })
 
 submenu()
