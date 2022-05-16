@@ -20,28 +20,22 @@
 
 	<positions>
 		<position>after_content</position>
-
 		<position>before_content</position>
 		<position>block_home_2</position>
 		<position>breadcrumbs</position>
-
 		<position>footer</position>
 		<position>header</position>
-		<position>p3transport__link</position>
-
 		<position>menu_top</position>
 		<position>menu_top__1</position>
 		<position>menu_top__2</position>
 		<position>menu_top__3</position>
-
 		<position>menu_top__left</position>
 		<position>menu_top__right</position>
-
 		<position>menu_top_sub</position>
-
+		<position>p3transport__link</position>
 		<position>search</position>
 		<position>speakers</position>
-
+		<position>submenu</position>
 		<position>topmenu</position>
 	</positions>
 </extension>
