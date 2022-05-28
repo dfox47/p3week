@@ -210,9 +210,9 @@
 	}
 
 	@media only screen and (max-width: 600px) {
-			font-size: 16px;
-			padding: 20px 0;
-			width: 100%;
+		font-size: 16px;
+		padding: 20px 0;
+		width: 100%;
 	}
 }
 
@@ -261,5 +261,27 @@
 			color: $c_main;
 			text-decoration: none;
 		}
+	}
+}
+
+.btn__register2 {
+	background-color: $c_main;
+	border: 1px solid rgba($c_main, .9);
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+	margin: 0 0 32px;
+	padding: 16px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition:  $transition;
+	width: 100%;
+
+	&:hover {
+		background-color: #fff;
+		color: $c_main;
+		text-decoration: none;
 	}
 }
