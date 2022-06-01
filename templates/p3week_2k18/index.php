@@ -104,8 +104,6 @@ include_once 'template-parts/home_video.php'; ?>
 		<div class="wrap">
 			<jdoc:include type="modules" name="footer" style="none" />
 		</div>
-
-		<a class="footer_box js-popup-show" href="javascript:void(0);" data-popup="registration2"></a>
 	</div>
 <?php } ?>
 
