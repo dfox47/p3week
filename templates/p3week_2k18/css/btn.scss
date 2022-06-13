@@ -32,6 +32,39 @@
 			color: #fff;
 		}
 	}
+
+	&__download3 {
+		color: #000;
+		display: inline-block;
+		font-family: $font_proxima_light;
+		font-size: 20px;
+		margin: 10px 0 20px;
+		padding: 0 0 0 30px;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&::before {
+			background: url(/images/icons/download.svg) 0 0 no-repeat scroll transparent;
+			content: "";
+			filter: grayscale(100%);
+			height: 19px;
+			left: 0;
+			position: absolute;
+			top: 5px;
+			transition: $transition;
+			width: 16px;
+		}
+
+		&:hover {
+			color: $c_main;
+
+			&::before {
+				filter: grayscale(0);
+				top: 11px;
+			}
+		}
+	}
 }
 
 .btn_close,
