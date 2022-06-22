@@ -1,13 +1,8 @@
 
-
-
 .p_org {
 	padding: 0 125px;
 
 	&__img {
-		align-items: flex-end;
-		display: flex;
-		justify-content: space-between;
 		margin: 0 0 70px;
 		width: 100%;
 
@@ -18,6 +13,7 @@
 			font-family: $font_proxima_light;
 			font-size: 17px;
 			letter-spacing: .1em;
+			margin: 1em 0 0;
 			text-decoration: none;
 			text-transform: uppercase;
 
@@ -36,6 +32,23 @@
 		&__link {
 			max-width: 300px;
 			width: 100%;
+		}
+
+		@media #{$mobile} {
+			display: block;
+			text-align: center;
+
+			a,
+			a:visited {
+				display: block;
+				text-align: center;
+			}
+
+			img,
+			svg {
+				display: inline-block;
+				margin: 0 0 30px;
+			}
 		}
 	}
 
@@ -155,7 +168,6 @@
 		}
 	}
 
-
 	&__img_lecap {
 		img,
 		svg {
@@ -261,6 +273,14 @@
 			max-width: 250px;
 		}
 	}
+
+
+
+	&__item {}
+
+	@media #{$tablet} {
+		padding: 0;
+	}
 }
 
 .p_org__img_6 {
@@ -270,13 +290,10 @@
 	}
 }
 
-
-
 .p_org__desc {
 	display: none;
-	font-size: 18px;
-	padding: 10px 0 0;
-	text-align: justify;
+	font-size: 16px;
+	padding: 10px 0 100px;
 
 	a,
 	a:visited {
@@ -302,12 +319,18 @@
 		}
 	}
 
-	p {
-		text-align: justify;
-	}
-
 	ul {
 		line-height: 1.5;
+	}
+
+	@media #{$mobile_s} {
+		font-size: 14px;
+
+		li {
+			&::before {
+				top: 8px;
+			}
+		}
 	}
 }
 
@@ -346,10 +369,8 @@
 	padding-top: 20px;
 }
 
-
-
 .p_org__more {
-	background-color: rgb(213,213,213);
+	background-color: $c_search__bg;
 	cursor: pointer;
 	display: block;
 	font-family: $font_proxima_light;
@@ -386,33 +407,8 @@
 			display: none;
 		}
 	}
-}
 
-.p_org__more_2 {}
-
-@media #{$mobile} {
-	.p_org {
-		padding: 0 75px;
-	}
-
-	.p_org__img {
-		display: block;
-		text-align: center;
-
-		a,
-		a:visited {
-			display: block;
-			text-align: center;
-		}
-
-		img,
-		svg {
-			display: inline-block;
-			margin: 0 0 30px;
-		}
-	}
-
-	.p_org__more {
+	@media #{$mobile} {
 		margin-top: 20px;
 
 		span {
@@ -421,20 +417,4 @@
 	}
 }
 
-@media #{$mobile_s} {
-	.p_org {
-		padding: 0;
-	}
-
-	.p_org__desc {
-		font-size: 14px;
-
-		li {
-			&::before {
-				top: 8px;
-			}
-		}
-	}
-}
-
-
+.p_org__more_2 {}
