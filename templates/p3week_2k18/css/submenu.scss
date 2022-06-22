@@ -115,6 +115,10 @@
 		}
 	}
 
+	.item-1365.current.active {
+		display: none;
+	}
+
 	@media #{$tablet} {
 		display: none;
 	}
