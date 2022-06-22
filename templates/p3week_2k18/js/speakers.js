@@ -15,7 +15,7 @@ speakersLinks.forEach((item) => {
 		link.target.classList.add('active')
 
 		// ALL selected
-		if ( letter === 'all' && letter === 'все' ) {
+		if ( letter === 'all' || letter === 'все' ) {
 			speakersItems.forEach((item) => {
 				item.classList.remove('hidden')
 			})
