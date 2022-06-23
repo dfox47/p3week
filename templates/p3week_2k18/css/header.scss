@@ -22,11 +22,13 @@
 	&__right {
 		align-items: flex-end;
 		display: flex;
+		flex-direction: column;
 		max-width: 420px;
 		position: relative;
 		text-align: right;
 
 		@media #{$tablet} {
+			align-items: center;
 			max-width: none;
 			padding: 0 20px 20px;
 			width: 100%;
