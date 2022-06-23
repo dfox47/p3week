@@ -20,7 +20,7 @@
 		</div>
 	</div>
 <?php }
-else if ( $_SERVER['REQUEST_URI'] === '/en/') { ?>
+else if ($_SERVER['REQUEST_URI'] === '/en/' || $_SERVER['REQUEST_URI'] === '/en') { ?>
 	<div class="home_video_new">
 		<video class="home_video_new__item" autoplay loop muted>
 			<source src="/images/2022/home.mp4" type="video/mp4" />
@@ -50,4 +50,3 @@ else { ?>
 		</div>
 	<?php } ?>
 <?php } ?>
-

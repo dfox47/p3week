@@ -85,8 +85,6 @@ php_flag display_startup_errors on
 php_flag display_errors on
 php_value error_reporting 4
 
-
-
 <IfModule mod_expires.c>
 	ExpiresActive On
 	ExpiresByType image/jpg "access 1 month"
@@ -120,8 +118,6 @@ php_value error_reporting 4
 	</FilesMatch>
 </IfModule>
 
-
-
 <IfModule mod_deflate.c>
 	# Compress HTML, CSS, JavaScript, Text, XML and fonts
 	AddOutputFilterByType DEFLATE application/javascript
@@ -152,22 +148,13 @@ php_value error_reporting 4
 	AddOutputFilterByType DEFLATE text/xml
 </IfModule>
 
-
-
-
-
-
-
-
+# charset | UTF-8
 php_value default_charset utf-8
 AddType 'text/html; charset=utf-8' .html .htm .shtml
 
-
-
-#Редирект с протокола http на https.
+# Redirect from http to https
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-
-
-
+RewriteCond %{HTTP_HOST} ^(www.)?p3week\.ru$ [NC]
+RewriteRule ^(.+)/$ https://%{HTTP_HOST}/$1 [R=301,L]
