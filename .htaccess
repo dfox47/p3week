@@ -26,6 +26,11 @@ Options -Indexes
 
 RewriteEngine On
 
+# redirect from trailing slashes
+RewriteCond %{REQUEST_URI} /(.+)/$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ https://p3week.ru/%1 [R=301,L]
+
 ## Begin - Rewrite rules to block out some common exploits.
 # If you experience problems on your site block out the operations listed below
 # This attempts to block the most common type of exploit `attempts` to Joomla!
@@ -155,6 +160,3 @@ AddType 'text/html; charset=utf-8' .html .htm .shtml
 # Redirect from http to https
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^(www.)?p3week\.ru$ [NC]
-RewriteRule ^(.+)/$ https://%{HTTP_HOST}/$1 [R=301,L]
