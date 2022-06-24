@@ -1,59 +1,53 @@
-var $ = jQuery.noConflict();
 
-$(window).bind("load", function() {
+var $ = jQuery.noConflict()
 
-	sendmail();
+$(window).bind('load', function() {
+	sendmail()
 
 	// AJAX contact form
 	function sendmail() {
-		var messageDelay = 2000;
+		var messageDelay = 2000
 
-		$(".popup_present").find("form").submit(submitForm);
+		$('.popup_present').find('form').submit(submitForm)
 
 		function submitForm() {
-			var contactForm = $(this);
+			let contactForm = $(this)
 
-			if (!$(this).find('.input_fio').val() || !$(this).find('.input_org').val() || !$(this).find('.input_status').val()) {
-				$(".msg_incomplete").addClass("active").delay(messageDelay).queue(function() {
-				// $(this).find(".msg_incomplete").addClass("active").delay(messageDelay).queue(function() {
-					$(this).removeClass("active").dequeue();
-				});
+			if (!contactForm.find('.input_fio').val() || !contactForm.find('.input_org').val() || !contactForm.find('.input_status').val()) {
+				$('.msg_incomplete').addClass('active').delay(messageDelay).queue(function() {
+					contactForm.removeClass('active').dequeue()
+				})
 			}
 			else {
-				$(this).find(".msg_sending").addClass("active");
+				contactForm.find('.msg_sending').addClass('active')
 
 				$.ajax({
-					url:		contactForm.attr('action') + "?ajax=true",
-					type:		contactForm.attr('method'),
-					data:		contactForm.serialize(),
-					success:	submitFinished
-				});
+					data:       contactForm.serialize(),
+					success:    submitFinished,
+					type:       contactForm.attr('method'),
+					url:        contactForm.attr('action') + '?ajax=true'
+				})
 			}
 
-			return false;
+			return false
 		}
 
 		function submitFinished(response) {
-			response = $.trim(response);
-			//$('.msg_sending').removeClass("active");
+			response = $.trim(response)
 
-			if (response == "success") {
-				/*$(".msg_success").addClass("active").delay(messageDelay).queue(function() {
-					$(this).removeClass("active").dequeue();
-				});*/
+			if (response === 'success') {
+				$('.popup_present_wrap').removeClass('active')
+				$('body, html').removeClass('overflow_hidden')
 
-				$(".popup_present_wrap").removeClass("active");
-				$("body, html").removeClass("overflow_hidden");
+				let linkItem = $('.input_data').val()
 
-				var link_item = $(".input_data").val();
-
-				window.open('/images/2017/' + link_item + '.pdf','_blank','','');
+				window.open('/images/2017/' + linkItem + '.pdf','_blank','','')
 			}
 			else {
-				$(".msg_fail").addClass("active").delay(messageDelay).queue(function() {
-					$(this).removeClass("active").dequeue();
-				});
+				$('.msg_fail').addClass('active').delay(messageDelay).queue(function() {
+					$(this).removeClass('active').dequeue()
+				})
 			}
 		}
 	}
-});
+})
