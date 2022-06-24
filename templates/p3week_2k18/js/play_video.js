@@ -25,22 +25,28 @@ function play_button_add() {
 // load youtube or vimeo player
 function play_video() {
 	$(document).on('click', '.video_preview', function() {
+		let $this       = $(this)
+		let $videoImg   = $this.find('img')
+
+		if (!$videoImg.length) return
+
 		// if it is youtube preview image
-		if ($(this).find("img").attr("src").indexOf("youtube") !== -1) {
-			$(this).find("img").hide()
-			$(this).find("img").parent().addClass("active").append("<iframe allowfullscreen src=\"//www.youtube.com/embed/" + $(this).find("img").attr("src").replace("http://img.youtube.com/vi/", "").replace("/mqdefault.jpg", "") + "?autoplay=1\"></iframe>")
+		if ($videoImg.attr('src').indexOf('youtube') !== -1) {
+			$videoImg.hide()
+			$videoImg.parent().addClass('active').append('<iframe allowfullscreen src="//www.youtube.com/embed/' + $videoImg.attr('src').replace('http://img.youtube.com/vi/', '').replace('/mqdefault.jpg', '') + '?autoplay=1"></iframe>')
 		}
 		// if it is vimeo image
-		else if ($(this).find("img").attr("class").indexOf("vimeo") !== -1) {
-			$(this).find("img").hide()
-			$(this).find("img").parent().addClass("active").append("<iframe src=\"//player.vimeo.com/video/" + $(this).find("img").attr("data-vimeo-id") + "?autoplay=1\"></iframe>")
+		else if ($videoImg.attr('class').indexOf('vimeo') !== -1) {
+			$videoImg.hide()
+			$videoImg.parent().addClass('active').append('<iframe src="//player.vimeo.com/video/' + $videoImg.attr('data-vimeo-id') + '?autoplay=1"></iframe>')
 		}
 	})
 
 	$(document).on('click', '.js-home_video_play', function() {
-		let data_video = $(this).attr('data-video')
+		let $this       = $(this)
+		let dataVideo   = $this.attr('data-video')
 
-		$(this).append('<iframe src="https://www.youtube.com/embed/' + data_video + '?autoplay=1&mute=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+		$this.append('<iframe src="https://www.youtube.com/embed/' + dataVideo + '?autoplay=1&mute=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 	})
 
 	$('.home_video').find('.btn').click(function () {
