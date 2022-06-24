@@ -30,8 +30,6 @@ $('.js-menu-video-link').click(function () {
 	})
 })
 
-
-
 $(window).bind('load', function() {
 	$('.p_video__item_img').find('.btn__play').click(function () {
 		$(this).parent().find('a').click()
