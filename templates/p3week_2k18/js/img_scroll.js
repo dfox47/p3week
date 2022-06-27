@@ -14,13 +14,13 @@ window.addEventListener('scroll', () => {
 })
 
 function imgScroll() {
-	$('img.js-imgScroll').each(function () {
+	$('img.js-img_scroll').each(function () {
 		let $this = $(this)
 
 		if ( ($(window).scrollTop() + $(window).innerHeight() > $this.offset().top) && ($(window).scrollTop() < $this.offset().top + $this.outerHeight()) ) {
 			let img_src = $this.attr('data-img-src')
 
-			$this.removeClass('js-imgScroll').attr( 'src', img_src )
+			$this.removeClass('js-img_scroll').attr( 'src', img_src )
 		}
 	})
 }
