@@ -31,9 +31,11 @@ unset($this->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']); ?>
 
 	<script src="/templates/p3week_2k18/jquery.3.2.1.js"></script>
 
-	<meta property="og:image" content="https://p3week.ru/images/logo2021.svg" />
-
 	<jdoc:include type="head" />
+
+	<meta property="og:image" content="https://p3week.ru/images/icons/logo_2022.png" />
+	<meta property="og:title" content="PPP Week 2022" />
+	<meta name="twitter:image" content="https://p3week.ru/images/icons/logo_2022.png" />
 </head>
 
 <body class="lang_<?php echo $this->language; ?> no_js">
