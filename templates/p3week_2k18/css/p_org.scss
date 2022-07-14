@@ -1,9 +1,14 @@
 
 .p_org {
-	padding: 0 125px;
+	//padding: 0 125px;
+
+	h2 {
+		margin: 0 0 1.5em;
+	}
 
 	&__img {
-		margin: 0 0 70px;
+		//margin: 0 0 70px;
+		margin: 0 0 30px;
 		width: 100%;
 
 		a,
@@ -11,7 +16,7 @@
 			color: #000;
 			display: inline-block;
 			font-family: $font_proxima_light;
-			font-size: 17px;
+			font-size: 12px;
 			letter-spacing: .1em;
 			margin: 1em 0 0;
 			text-decoration: none;
@@ -418,3 +423,11 @@
 }
 
 .p_org__more_2 {}
+
+.p_org_list {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 30px;
+
+	&__item {}
+}
