@@ -197,7 +197,7 @@
 	&__img_pppcenter {
 		img,
 		svg {
-			max-width: 320px;
+			max-width: 190px;
 		}
 	}
 
@@ -434,4 +434,9 @@
 	grid-gap: 30px;
 
 	&__item {}
+
+	.h2 {
+		color: $c_menu_bg;
+		opacity: .5;
+	}
 }

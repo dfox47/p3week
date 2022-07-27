@@ -202,11 +202,14 @@
 
 	&__link {
 		display: block;
+		filter: grayscale(100%);
 		margin: 0 5px 10px;
 		text-decoration: none;
+		transition: $transition;
 
 		&:hover {
-			opacity: .7;
+			filter: grayscale(0);
+			//opacity: .7;
 		}
 	}
 }

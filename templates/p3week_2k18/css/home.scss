@@ -66,6 +66,33 @@
 	}
 }
 
+.home_partners {
+	text-align: center;
+
+	&__item {
+		display: inline-block;
+		margin: 0 40px 0 0;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&__pppcenter {
+			width: 300px;
+		}
+
+		&__veb_rf {
+			width: 90px;
+		}
+	}
+}
+
+.home_partners_title {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 .home_slider {
 	.owl-item {
 		opacity: 0;
