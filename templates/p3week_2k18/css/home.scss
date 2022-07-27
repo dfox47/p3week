@@ -67,28 +67,41 @@
 }
 
 .home_partners {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 
 	&__item {
-		display: inline-block;
-		margin: 0 40px 0 0;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		width: 50%;
 
-		&:last-child {
-			margin: 0;
+		img {
+			width: 100%;
 		}
 
 		&__pppcenter {
-			width: 300px;
+			//width: 300px;
+
+			img {
+				max-width: 300px;
+			}
 		}
 
 		&__veb_rf {
-			width: 90px;
+			//width: 90px;
+
+			img {
+				max-width: 90px;
+			}
 		}
 	}
 }
 
 .home_partners_title {
 	font-size: 20px;
+	margin: 0 0 .5em;
+	opacity: .5;
 	text-align: center;
 	text-transform: uppercase;
 }
