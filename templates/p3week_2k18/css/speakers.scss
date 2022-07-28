@@ -97,8 +97,14 @@
 	padding: 50px 110px;
 
 	h3 {
-		margin: 0 0 .5em;
+		margin-left: -110px;
+		margin-right: -110px;
 		text-transform: uppercase;
+
+		@media #{$mobile} {
+			margin-left: -50px;
+			margin-right: -50px;
+		}
 	}
 
 	img {
