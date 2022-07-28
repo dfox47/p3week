@@ -68,6 +68,7 @@
 
 .home_partners {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 
 	&__item {
@@ -81,7 +82,7 @@
 		}
 
 		&__pppcenter {
-			//width: 300px;
+			min-width: 300px;
 
 			img {
 				max-width: 300px;
@@ -89,7 +90,7 @@
 		}
 
 		&__veb_rf {
-			//width: 90px;
+			min-width: 90px;
 
 			img {
 				max-width: 90px;

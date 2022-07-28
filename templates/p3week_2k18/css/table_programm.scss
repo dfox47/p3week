@@ -1,6 +1,4 @@
 
-
-
 .table_programm {
 	font-family: $font_proxima_light;
 
@@ -95,6 +93,34 @@
 
 		&__hidden {
 			display: none;
+
+			p {
+				text-align: justify;
+			}
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin: 6px 0 0;
+		max-width: 130px;
+		text-align: center;
+		width: 100%;
+
+		img,
+		svg {
+			display: inline-block!important;
+			margin: 0 auto;
+			max-width: 150px!important;
+			width: 100%;
+		}
+
+		&.table_programm__logo_veb_infra {
+			img,
+			svg {
+				width: 60% !important;
+				max-width: 70px !important;
+			}
 		}
 	}
 
@@ -107,34 +133,6 @@
 		}
 	}
 }
-
-
-
-.table_programm__logo,
-.table_programm__logo:visited {
-	margin: 16px 0 0;
-	max-width: 130px;
-	text-align: center;
-	width: 100%;
-
-	img,
-	svg {
-		display: inline-block!important;
-		margin: 0 auto;
-		max-width: 150px!important;
-		width: 100%;
-	}
-
-	&.table_programm__logo_veb_infra {
-		img,
-		svg {
-			width: 60% !important;
-			max-width: 70px !important;
-		}
-	}
-}
-
-
 
 .table_programm__more {
 	color: $c_main;
@@ -395,5 +393,3 @@
 		text-align: center;
 	}
 }
-
-
