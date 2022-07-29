@@ -1,31 +1,12 @@
 
 .p_org {
-	//padding: 0 125px;
-
 	h2 {
 		margin: 0 0 1.5em;
 	}
 
 	&__img {
-		//margin: 0 0 70px;
 		margin: 0 0 30px;
 		width: 100%;
-
-		a,
-		a:visited {
-			color: #000;
-			display: inline-block;
-			font-family: $font_proxima_light;
-			font-size: 12px;
-			letter-spacing: .1em;
-			margin: 1em 0 0;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 
 		img,
 		svg {
@@ -430,13 +411,30 @@
 
 .p_org_list {
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 25% 25% 25% 25%;
 	grid-gap: 30px;
 
-	&__item {}
+	&__item {
+		a,
+		a:visited {
+			color: #000;
+			display: inline-block;
+			font-family: $font_proxima_light;
+			font-size: 12px;
+			letter-spacing: .1em;
+			margin: 1em 0 0;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 
 	.h2 {
 		color: $c_menu_bg;
+		font-size: 20px;
 		min-height: 30px;
 		opacity: .5;
 	}
