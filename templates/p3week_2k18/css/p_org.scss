@@ -5,7 +5,7 @@
 	}
 
 	&__img {
-		margin: 0 0 30px;
+		min-height: 80px;
 		width: 100%;
 
 		img,
@@ -435,7 +435,8 @@
 	.h2 {
 		color: $c_menu_bg;
 		font-size: 20px;
-		min-height: 30px;
+		margin:  1em 0 0;
+		min-height: 90px;
 		opacity: .5;
 	}
 }
