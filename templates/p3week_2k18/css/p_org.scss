@@ -5,6 +5,8 @@
 	}
 
 	&__img {
+		align-items: center;
+		display: flex;
 		min-height: 80px;
 		width: 100%;
 
@@ -411,10 +413,13 @@
 
 .p_org_list {
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-gap: 30px;
+	grid-template-columns: calc(25% - 30px) calc(25% - 30px) calc(25% - 30px) calc(25% - 30px);
+	grid-gap: 40px;
+	margin: 30px 0 0;
 
 	&__item {
+		margin: 0 0 30px;
+
 		a,
 		a:visited {
 			color: #000;
